@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register with us</title>
+    <style>
+        p {
+            margin: 25px;
+        }
+        textarea{
+            margin: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center";>
+        <h1 style="text-align: center";>Hey! Register with us!</h1>
+        <form method="POST" action="https://requestb.in/1knqhyl1">
+
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" value="User">
+            <br>
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password">
+            <br>
+
+
+            <textarea name="bio" id="bio" cols="50" rows="20">Bio</textarea>
+            <p>How did you hear about us?</p>
+            <label for="option_1">Billboard</label>
+            <input id="option_1" type="radio" name="options" value="Billboard" checked><br>
+            <label for="option_2">Radio Advertisement</label>
+            <input id="option_2" type="radio" name="options" value="Radio Advertisement"><br>
+            <label for="option_3">Internet Advertisement</label>
+            <input id="option_3" type="radio" name="options" value="Internet Advertisement"><br>
+            <label for="option_4">Other</label>
+            <input id="option_4" type="radio" name="options" value="Other"><br>
+
+            <p>What browser are you using?</p>
+            <select name="browser">
+                <option value="explorer">Explorer</option>
+                <option value="chrome">Chrome</option>
+                <option value="firefox">Firefox</option>
+                <option value="safari">Safari</option>
+            </select>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+</body>
+</html>
