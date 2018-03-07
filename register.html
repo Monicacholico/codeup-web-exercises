@@ -9,7 +9,7 @@
     <h1>Register with us!</h1>
         <form method="post" action="https://requestb.in/1kisfwc1">
             <label for="username">Username</label>
-            <input id="username" name="username" type="text" required value="username" style="margin: 10px">
+            <input id="username" name="username" type="text" required value="username" style="margin: 10px" autofocus="autofocus">
             <br>
 
             <label for="email">Email</label>
@@ -20,7 +20,8 @@
             <input id="password" name="password" type="password" required style="margin: 10px">
             <br>
 
-            <input name="enewsletter" value="true" type="checkbox" checked>Sign up for enewsletter!
+            <input id="enewsletter" name="enewsletter" value="true" type="checkbox" checked><label for="enewsletter">Sign up for enewsletter!</label>
+
             <br>
             <input type="submit" style="margin: 20px">
 
