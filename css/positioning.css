@@ -34,7 +34,7 @@
 }
 .image{
     position: relative;
-    bottom: 105px;
+    top: -105px;
     left: 40px;
 }
 
