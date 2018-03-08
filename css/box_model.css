@@ -1,0 +1,21 @@
+.box{
+    width: 150px;
+    heigh: 50px;
+    padding: 10px;
+    border: solid 1px #000;
+}
+
+#red{
+    background-color: red;
+#orange{
+    background-color: orange;
+#yellow{
+    background-color: yellow;
+#green{
+    background-color: green;
+#blue{
+    background-color: blue;
+#purple{
+    background-color: purple;
+}
+
