@@ -1,0 +1,79 @@
+
+body{
+    font-family: 'Rammetto One', cursive;
+    background-color: antiquewhite;
+    background-image: url(../img/dust_scratches.png);
+    background-repeat: repeat;
+}
+
+header{
+    text-align: center;
+}
+
+hr{
+    width: auto;
+}
+
+h1, h2 {
+    color: #c6a59d;
+    text-decoration: underline;
+}
+.vision {
+    text-align: center;
+}
+ul, ol, li {
+    list-style-type: square;
+    list-style-image: url("");
+}
+
+table, th, td {
+    padding: 10px;
+    font-size: .5em;
+    text-align: center;
+    border-style: solid;
+}
+
+a:link {
+    color: aqua;
+}
+
+a:hover {
+    color: white;
+}
+
+a:visited {
+    color: deeppink;
+}
+
+.first{
+    width: 300px;
+    padding: 25px;
+    float: left;
+    position: absolute;
+    margin-left: 100px;
+}
+.second {
+    width: 300px;
+    padding: 25px;
+    float: left;
+    position: relative;
+    left: 400px;
+}
+.third{
+    width: 300px;
+    padding: 25px;
+    float: left;
+    position: relative;
+    left: 350px;
+}
+.article{
+    text-align: center;
+    width: auto;
+    height: auto;
+    clear: both;
+}
+.products {
+    margin: auto;
+    width: 400px ;
+    text-align: center;
+}
