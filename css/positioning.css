@@ -6,6 +6,8 @@
     margin: 50px;
     position:relative;
     float: left;
+    color: #fff;
+    font-weight: bold;
 }
 #red {
     background-color: red;
@@ -21,22 +23,27 @@
 }
 #green {
     background-color: green;
-    clear: left;
 }
 #blue{
     background-color: blue;
 
 }
 #purple{
-    background-color: purple;
+    background-color: violet;
 
 }
 .image{
     position: relative;
-    bottom: 85px;
+    bottom: 105px;
     left: 40px;
 }
 
 h1{
     margin-bottom: 50px;
+}
+.corner{
+    float: right;
+}
+.box:nth-child(5), .box:nth-child(7){
+    clear: left;
 }
