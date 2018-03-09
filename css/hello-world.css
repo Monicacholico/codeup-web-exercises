@@ -1,0 +1,78 @@
+body{
+    background-color: gray;
+    padding: 50px;
+}
+h1{
+    color: green;
+}
+
+.wrapper{
+    width: 65%;
+    height: auto;
+    background-color: white;
+    border: solid 1px #000;
+    position: absolute;
+    margin: 10%;
+}
+
+main{
+    width: 65%;
+    height: 600px;
+    background-color: beige ;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+
+aside{
+    width: 30%;
+    height: 600px;
+    background-color: darkseagreen ;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+
+ul, li a{
+    text-align: center;
+    display: block;
+    color: #000;
+    margin: 20px;
+    padding: 5px;
+    list-style: none;
+}
+
+.content{
+    width: 80%;
+    margin: 10px;
+    padding: 5px;
+    text-align: justify;
+
+}
+
+.footaside {
+    margin-top: 180px;
+    color: brown;
+    font-weight: bold;
+    float: bottom;
+    text-decoration: none;
+    position: relative;
+    top: 75px;
+
+
+}
+.footmain {
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 350px;
+    color: brown;
+    font-weight: bold;
+    position: relative;
+    top: 180px;
+    text-decoration: none;
+}
