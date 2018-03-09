@@ -1,0 +1,133 @@
+.alert-info {
+    background-color: azure;
+    border: solid 2px #808080;
+    padding: 1em;
+    text-align: center;t
+    /*margin-top: 10px;*/
+    /*width: 100%;*/
+    /*height: 50px;*/
+    /*text-decoration: none;*/
+    /*text-align: center;*/
+}
+
+h1 {
+    text-align: center;
+    /*margin: auto;*/
+    /*display: flex;*/
+    /*order: 2;*/
+    /*width: 90%;*/
+}
+
+.nav-links{
+    list-style-type: none;
+    width: 90%;
+    text-align: center;
+    display: inline-block;
+
+}
+
+ul{
+    width: 30%;
+}
+
+li{
+    background-color: darkgray;
+    list-style-type: none;
+    text-align: center;
+    width:90%;
+    height: 50px;
+    margin: 20px;
+    font-weight: bold;
+    border: solid 1px black;
+
+}
+
+
+.header-img{
+    margin: 0 auto;
+}
+
+img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+a #main {
+    text-decoration: none;
+    color: grey;
+    font-weight: bold;
+}
+
+section.main{
+    position: relative;
+    float: left;
+    width: 60%;
+    padding: 10px;
+    order: 1;
+
+}
+section.sub-section{
+    position: relative;
+    float: left;
+    width: 30%;
+    padding: 10px;
+    order: 2;
+}
+.social-media-links{
+
+}
+
+footer{
+    clear: both;
+}
+
+@media screen and (min-width: 768px){
+        .alert-info {
+            display: none;
+        }
+        section .main {
+            display: flex;
+            width: 66%;
+            /*order: 1;*/
+        }
+        section .sub-section{
+            width: 33%;
+            display: flex;
+            /*order: 2;*/
+        }
+        .nav-links{
+            width: 50%;
+            text-align: right;
+            float: right;
+            /*padding: 10px;*/
+            /*display: inline;*/
+            /*background-color: white;*/
+            /*text-decoration: none;*/
+            /*top: -20px;*/
+            /*left: 90%;*/
+            /*position: relative;*/
+            /*width: 50%*/
+
+
+        }
+        li{
+            list-style: none;
+            display: inline;
+            background-color: white;
+            border-style: none;
+            line-height: 4em;
+            /*margin-top: 50px;*/
+            /*margin-right: 10px;*/
+        }
+
+        h1{
+            top: 50px;
+            float: left;
+            display: flex;
+            width: 100px;
+        }
+        img{
+            /*100%;*/
+            /*margin: 0 auto;*/
+        }
+}
