@@ -1,0 +1,18 @@
+
+.col-8, .col-4{
+    float:left;
+}
+#social-media-links{
+    width: 25px;
+    height: 25px;
+    float: right;
+}
+img#social-media-links{
+    width: 25px;
+    height: 25px;
+}
+@media (min-width: 768px){
+    .alert-info{
+        display: none;
+    }
+}
