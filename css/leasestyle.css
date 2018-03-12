@@ -1,8 +1,19 @@
+header{
+    margin: 20px;
+}
+
+.wrapper{
+    margin: 20px;
+}
 .clauses {
-    width: 400px;
+    width: 90%;
     text-align: justify;
 }
 
 textarea {
     width: 700px;
+}
+
+.small_letters{
+    font-size: 8px;
 }
