@@ -62,11 +62,17 @@
     50%;
 }
 
-.five
+.five-eighth{
+    50%;
+}
 
+.offset-three-eighth {
+    margin-left: 30px;
+    margin-top: 0;
+
+}
 .offset-one-eighth {
-    margin-right: 0;
-
+    margin-left: 25px;
 }
 
 /*#social-media-links {*/
