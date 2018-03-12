@@ -4,37 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, inicial-scale=1">
     <title>Media Queries</title>
+    <link rel="stylesheet" href="css/grid-layout.css">
     <link rel="stylesheet" href="css/media-queries.css">
 </head>
 <body>
-    <div class="alert-info hidden-on-desktop">
-        <a href="#main">Skip to main content</a>
-    </div>
-    <h1>Company</h1>
-    <nav>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="header-img">
-        <img src="http://lorempixel.com/g/500/300" alt="">
-    </div>
-    <section id="main" class="main">
-        <h2>Main Section</h2>
-        <p>Amet lorem accusantium maxime quis iusto. Sit aliquid quidem at animi commodi, iusto harum, non. Accusantium sequi consectetur deleniti soluta tempora. Maxime maiores blanditiis veritatis vitae amet maiores sapiente in?</p>
-    </section>
-    <section class="sub-section">
-        <h2>Sub-section</h2>
-        <p>Amet optio quidem voluptatum neque esse at saepe, reiciendis quaerat architecto unde minima aspernatur harum cum totam non amet soluta. Ea quae odio harum magni ab vitae tenetur. Itaque numquam!</p>
-    </section>
-    <footer>
-        <p>(c) 2017 All rights reserved</p>
-        <div id="social-media-links">
+<!--This is version one-->
+    <div class="container">
+        <div class="row">
+            <div class="column one-third"></div>
+            <div class="column one-third">
+                <a href="#main">Skip to main content</a>
+            </div>
+            <div class="column one-third"></div>
+        </div>
+        <div class="row">
+            <h1 class="column one-sixth">Company</h1>
+            <div class="column one-sixth"></div>
+            <div class="column one-sixth"></div>
+            <nav>
+            <ul class="column three-sixth">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                 <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div class="row">
+            <div class="column one-third"></div>
+            <div class="column one-third"><img src="http://lorempixel.com/g/300/300" alt="">
+            </div>
+            <div class="column one-third"></div>
+            <div class="row"></div>
+        </div>
+        <div class="row">
+            <div class="column two-third">
+        <section id="main" class="main">
+            <h2>Main Section</h2>
+            <p>Amet lorem accusantium maxime quis iusto. Sit aliquid quidem at animi commodi, iusto harum, non. Accusantium sequi consectetur deleniti soluta tempora. Maxime maiores blanditiis veritatis vitae amet maiores sapiente in?</p>
+        </section>
+            </div>
+            <div class="column one-third">
+        <section class="sub-section">
+            <h2>Sub-section</h2>
+            <p>Amet optio quidem voluptatum neque esse at saepe, reiciendis quaerat architecto unde minima aspernatur harum cum totam non amet soluta. Ea quae odio harum magni ab vitae tenetur. Itaque numquam!</p>
+        </section>
+            </div>
+        </div>
+        <div class="row">
 
         </div>
-    </footer>
+        <div class="row">
+            <div class="column three-sixth" id="social-media-links">
+                <a href="#"><img src="Instagram.png" </a>
+                <a href="#"><img src="Snapchat.png" </a>
+                <a href="#"><img src="Email.png" </a>
+            </div>
+            <div class="column three-sixth"></div>
+        </div>
+    </div>
+<!--This is a second version-->
+    <div class="container">
+        <div class="row">
+            <div class="column one-half"><a href="#main">Skip to main content</a></div>
+            <div class="column one-half"></div>
+        </div>
+        <div class="row">
+            <div class="column one-third"><h1>Company</h1></div>
+            <div class="column one-third"></div>
+            <div class="column one-third"></div>
+        </div>
+        <div class="row">
+            <div class="column one-fourth"><li><a href="#">Home</a></li></div>
+            <div class="column one-fourth"><li><a href="#">About</a></li></div>
+            <div class="column one-fourth"><li><a href="#">Work</a></li></div>
+            <div class="column one-fourth"><li><a href="#">Contact</a></li></div>
+        </div>
+        <div class="row">
+            <div class="column one-sixth"><p>Amet lorem accusantium maxime quis iusto. Sit aliquid quidem at animi commodi, iusto harum, non. Accusantium sequi consectetur deleniti soluta tempora. Maxime maiores blanditiis veritatis vitae amet maiores sapiente in?</p></div>
+            <div class="column one-sixth"><p>Amet lorem accusantium maxime quis iusto. Sit aliquid quidem at animi commodi, iusto harum, non. Accusantium sequi consectetur deleniti soluta tempora. Maxime maiores blanditiis veritatis vitae amet maiores sapiente in?</p></div>
+            <div class="column one-sixth"><p>Amet lorem accusantium maxime quis iusto. Sit aliquid quidem at animi commodi, iusto harum, non. Accusantium sequi consectetur deleniti soluta tempora. Maxime maiores blanditiis veritatis vitae amet maiores sapiente in?</p></div>
+            <div class="column one-sixth"><p>Amet lorem accusantium maxime quis iusto. Sit aliquid quidem at animi commodi, iusto harum, non. Accusantium sequi consectetur deleniti soluta tempora. Maxime maiores blanditiis veritatis vitae amet maiores sapiente in?</p></div>
+            <div class="column one-sixth"><p>Amet lorem accusantium maxime quis iusto. Sit aliquid quidem at animi commodi, iusto harum, non. Accusantium sequi consectetur deleniti soluta tempora. Maxime maiores blanditiis veritatis vitae amet maiores sapiente in?</p></div>
+            <div class="column one-sixth"><img src="http://lorempixel.com/g/300/300" alt=""></div>
+        </div>
+        <!--<div class="row">-->
+            <!--<div class="column three-eighth"><img src="http://lorempixel.com/g/300/300" alt=""></div>-->
+            <!--<div class="column five-eighth"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consectetur dolorem earum eius eligendi error eum expedita explicabo incidunt ipsa iste labore, laudantium maiores molestias sequi sunt tempora vel-->
+                <!--veniam vitae voluptates. Accusamus aperiam dignissimos ducimus esse ex, fuga fugiat fugit laudantium magni nobis non nostrum quaerat repudiandae ut voluptas.-->
+                <!--Amet optio quidem voluptatum neque esse at saepe, reiciendis quaerat architecto unde minima aspernatur harum cum totam non amet soluta. Ea quae odio harum magni ab vitae tenetur. Itaque numquam!</p></div>-->
+        <!--</div>-->
+        <div class="row">
+            <div class="column three-eighth"><img src="http://lorempixel.com/g/300/300" alt=""></div>
+            <div class="column three-eighth offset-three-eighth"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aperiam cum doloremque libero nihil omnis praesentium quam temporibus voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut dolorum
+                eum explicabo itaque molestias numquam possimus repellat ut voluptatem? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque
+                dolore eius facere facilis hic, odio placeat praesentium sapiente velit! Amet optio quidem voluptatum neque esse at saepe, reiciendis quaerat architecto unde minima aspernatur harum cum totam non amet soluta. Ea quae odio harum magni ab vitae tenetur. Itaque
+                numquam! Ea quae odio harum magni ab vitae tenetur. Itaque numquam!</p>
+            </div>
+            <div class="column one-eighth offset-one-eighth"><p>Amet optio quidem voluptatum neque esse at saepe, reiciendis quaerat architecto unde minima aspernatur harum cum totam non amet soluta.</p></div>
+            <div class="column one-eighth"></div>
+            <!--<div class="column one-eighth"></div>-->
+            <!--<div class="column one-eighth"><p>Amet optio quidem voluptatum neque esse at saepe, reiciendis quaerat architecto unde minima aspernatur harum cum totam non amet soluta. Ea quae odio harum magni ab vitae tenetur. Itaque numquam!</p></div>-->
+        </div>
+        <div class="row">
+            <div class="column one-third"><img src="http://lorempixel.com/g/300/300" alt=""></div>
+            <div class="column one-third"><img src="http://lorempixel.com/g/300/300" alt=""></div>
+            <div class="column one-third"><img src="http://lorempixel.com/g/300/300" alt=""></div>
+        </div>
+        <div class="row">
+            <div class="column one-third"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur facere fugit illum possimus, reiciendis sit totam ullam veniam veritatis.</div>
+            <div class="column one-third"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae illum magnam omnis quis quo rem reprehenderit sequi sunt veniam?</div>
+            <div class="column one-third">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ipsam maiores nam neque odio sit soluta totam? Consequatur, illum vel?</div>
+        </div>
+        <div class="row">
+            <div class="column one-fourth"><p>(c) 2017 All rights reserved</p></div>
+            <div class="column one-half">
+                <div id="social-media-links">
+                    <a href="#"><img src="Instagram.png" </a>
+                    <a href="#"><img src="Snapchat.png" </a>
+                    <a href="#"><img src="Email.png" </a>
+                </div>
+            </div>
+            <div class="column one-eighth"></div>
+            <div class="column one-eighth"></div>
+        </div>
+    </div>
+    <!--<footer>-->
+        <!--<p>(c) 2017 All rights reserved</p>-->
+        <!--<div id="social-media-links">-->
+            <!--<a href="#"><img src="Instagram.png" </a>-->
+            <!--<a href="#"><img src="Snapchat.png" </a>-->
+            <!--<a href="#"><img src="Email.png" </a>-->
+        <!--</div>-->
+    <!--</footer>-->
 </body>
 </html>
