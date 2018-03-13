@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Order Pizza</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-   <link rel="stylesheet" href="css/order-pizza.css"
+   <link rel="stylesheet" href="css/order-pizza.css">
     <!-- Your custom styles go here -->
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Pizza world</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDrodown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggle-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Order online<span class="sr-only">(current)</span></a>
@@ -28,7 +28,7 @@
         <nav class="navbar navbar-light bg-light">
             <form class="form-inline">
                 <input class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Zip Code">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you!</button>
             </form>
         </nav>
         <ul class="navbar-nav">
@@ -39,11 +39,11 @@
     </nav>
     <!--This is the container for the jumbotron-->
     <main class="container-fluid">
-        <div class="jumbtron-fluid col-12">
+        <div class="jumbotron-fluid">
             <div class="card bg-light text-dark">
                 <img class="card-img text-center" src="pizza.png">
                 <div class="card-img-overlay">
-            <h1 class="card-tittle display-6 text-center m-5 col-12">Welcome to Pizza World!</h1>
+            <h1 class="card-tittle display-6 text-center m-5">Welcome to Pizza World!</h1>
                 </div>
             </div>
         </div>
@@ -59,11 +59,13 @@
             <!--<div class="col-12">-->
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Size and crust</a>
-                </li><li class="nav-item">
-                    <a class="nav-link active" href="#">Chesse and Sauce</a>
-                </li><li class="nav-item">
-                    <a class="nav-link active" href="#">Toppings</a>
+                    <a class="nav-link active" href="#"><span class="badge badge-secondary">1</span> Size and crust</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="badge badge-secondary">2</span> Chesse and Sauce</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="badge badge-secondary">3</span> Toppings</a>
                 </li>
             </ul>
             </div>
@@ -83,7 +85,7 @@
                 <div class="card-header">Hand Tossed</div>
                 <div class="card-body">Garlic seasoned crust with a rich buttery taste.
                     <ul class="list-group">
-                        <li class="list-group-item"><input type="radio" name="hand-tossed" id="hand-tossed" > Small (10")</li>
+                        <li class="list-group-item"><input type="radio" name="hand-tossed" id="hand-tossed"> Small (10")</li>
                         <li class="list-group-item"><input type="radio" name="hand-tossed" id="hand-tossed"> Medium (12"></li>
                     </ul>
                 </div>
@@ -102,11 +104,12 @@
 
         </div>
         <div class="card-footer mb-3">
-            <button type="button" class="btn btn-primary float-right">Next</button>
+            <button type="button" class="btn btn-primary float-right"> Next</button>
         </div>
         </div>
         </div>
-    </div><!--HERE'S TO CHOOSE YOUR CHEESE AND SAUSE-->
+    </div>
+        <!--HERE'S TO CHOOSE YOUR CHEESE AND SAUSE-->
     <!--<div class="container-fluid">-->
         <!--<div class="row">-->
         <!--<div class="col-md-12">-->
@@ -124,7 +127,6 @@
                     </select>
                 </div>
             </div>
-
         </div>
         <div class="card-body">
             <div class="card text-dark bg-light mb-3">
@@ -145,7 +147,6 @@
                     </select>
                 </div>
             </div>
-
         </div>
         <div class="card-footer mb-3">
             <button type="button" class="btn btn-primary float-right">Next Step</button>
@@ -165,28 +166,26 @@
                 <div class="card-header">Choose Meats</div>
                 <div class="card-body">
                     <ul class="list-group">
-                        <li class="list-group-item"><input type="checkbox" name="hand-tossed" id="hand-tossed"> Beef</li>
-                        <li class="list-group-item"><input type="checkbox" name="hand-tossed" id="hand-tossed"> Ham</li>
-                        <li class="list-group-item"><input type="checkbox" name="hand-tossed" id="hand-tossed"> Philly Steak</li>
-                        <li class="list-group-item"><input type="checkbox" name="hand-tossed" id="hand-tossed"> Bacon</li>
+                        <li class="list-group-item"><input type="checkbox" name="meats" id="meats"> Beef</li>
+                        <li class="list-group-item"><input type="checkbox" name="meats" id="meats"> Ham</li>
+                        <li class="list-group-item"><input type="checkbox" name="meats" id="meats"> Philly Steak</li>
+                        <li class="list-group-item"><input type="checkbox" name="meats" id="meats"> Bacon</li>
                     </ul>
                 </div>
             </div>
-
         </div>
         <div class="card-body">
             <div class="card text-dark bg-light mb-3">
                 <div class="card-header">Choose Non-Meats</div>
                 <div class="card-body">
                     <ul class="list-group">
-                        <li class="list-group-item"><input type="checkbox" name="hand-tossed"> Green Peppers</li>
-                        <li class="list-group-item"><input type="checkbox" name="hand-tossed"> Mushrooms</li>
-                        <li class="list-group-item"><input type="checkbox" name="hand-tossed"> Onions</li>
-                        <li class="list-group-item"><input type="checkbox" name="hand-tossed"> Jalapeno Peppers</li>
+                        <li class="list-group-item"><input type="checkbox" name="non-meats"> Green Peppers</li>
+                        <li class="list-group-item"><input type="checkbox" name="non-meats"> Mushrooms</li>
+                        <li class="list-group-item"><input type="checkbox" name="non-meats"> Onions</li>
+                        <li class="list-group-item"><input type="checkbox" name="non-meats"> Jalapeno Peppers</li>
                     </ul>
                 </div>
             </div>
-
         </div>
         <div class="card-footer mb-3">
             <button type="button" class="btn btn-primary float-right">Checkout</button>
