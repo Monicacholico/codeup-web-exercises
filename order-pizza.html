@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Order Pizza</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+   <link rel="stylesheet" href="css/order-pizza.css"
     <!-- Your custom styles go here -->
 </head>
 <body>
@@ -36,12 +37,163 @@
             </li>
         </ul>
     </nav>
+    <!--This is the container for the jumbotron-->
     <main class="container-fluid">
-        <div class="jumbtron-fluid">
-            <h1 class="display-3 text-center">Welcome to Pizza World!</h1>
-            <img src="pizza.png">
+        <div class="jumbtron-fluid col-12">
+            <div class="card bg-light text-dark">
+                <img class="card-img text-center" src="pizza.png">
+                <div class="card-img-overlay">
+            <h1 class="card-tittle display-6 text-center m-5 col-12">Welcome to Pizza World!</h1>
+                </div>
+            </div>
         </div>
     </main>
+    <!--THIS IS THE BEGINNING TO BUILD YOUR PIZZA-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+        <h2 class="display-5">Build your own pizza!</h2>
+                <!--THIS IS A NAVIGATION BAR TO CHOOSE HOW YOU WANT YOUR PIZZA-->
+    <!--<div class="">-->
+        <!--<div class="row">-->
+            <!--<div class="col-12">-->
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Size and crust</a>
+                </li><li class="nav-item">
+                    <a class="nav-link active" href="#">Chesse and Sauce</a>
+                </li><li class="nav-item">
+                    <a class="nav-link active" href="#">Toppings</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+        </div>
+        </div>
+    </div>
+    <!--HERE'S TO CHOOSE SIZE AND CRUST-->
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-12">
+    <div class="card text-dark bg-light mb-3">
+        <div class="card-header bg-primary">Choose size and crust</div>
+        <div class="card-body">
+            <div class="card text-dark bg-light mb-3">
+                <div class="card-header">Hand Tossed</div>
+                <div class="card-body">Garlic seasoned crust with a rich buttery taste.
+                    <ul class="list-group">
+                        <li class="list-group-item"><input type="radio" name="hand-tossed" id="hand-tossed" > Small (10")</li>
+                        <li class="list-group-item"><input type="radio" name="hand-tossed" id="hand-tossed"> Medium (12"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="card text-dark bg-light mb-3">
+                <div class="card-header">Crispy Thin</div>
+                <div class="card-body">This enough for optimum crispy to crunchy ratio.
+                    <ul class="list-group">
+                        <li class="list-group-item"><input type="radio" name="crispy_thin" id="crispy_thin"> Medium (12")</li>
+                        <li class="list-group-item"><input type="radio" name="crispy_thin" id="crispy_thin"> Large (14"></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-footer mb-3">
+            <button type="button" class="btn btn-primary float-right">Next</button>
+        </div>
+        </div>
+        </div>
+    </div><!--HERE'S TO CHOOSE YOUR CHEESE AND SAUSE-->
+    <!--<div class="container-fluid">-->
+        <!--<div class="row">-->
+        <!--<div class="col-md-12">-->
+    <div class="card text-dark bg-light mb-3">
+        <div class="card-header bg-primary">Choose cheese and sauce</div>
+        <div class="card-body">
+            <div class="card text-dark bg-light mb-3">
+                <div class="card-header">Cheese</div>
+                <div class="card-body">How much?
+                    <select class="custom-select">
+                        <option selected>Light</option>
+                        <option value="1">Normal</option>
+                        <option value="1">Extra</option>
+                        <option value=1">Double</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-body">
+            <div class="card text-dark bg-light mb-3">
+                <div class="card-header">Sauce</div>
+                <div class="card-body">What type?
+                    <select class="custom-select">
+                        <option selected>Tomato sauce</option>
+                        <option value="1">Marinara sauce</option>
+                        <option value="1">BBQ Sauce</option>
+                        <option value=1">Alfredo Sauce</option>
+                    </select>
+                </div>
+                <div class="card-body">How much?
+                    <select class="custom-select">
+                        <option selected>Light</option>
+                        <option value="1">Normal</option>
+                        <option value="1">Extra</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-footer mb-3">
+            <button type="button" class="btn btn-primary float-right">Next Step</button>
+            <button type="button" class="btn btn-primary float-right">Previous Step</button>
+        </div>
+        </div>
+        </div>
+    </div>
+        <!--HERE'S TO CHOOSE YOUR TOPPINGS-->
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-12">
+    <div class="card text-dark bg-light mb-3">
+        <div class="card-header bg-primary">Choose Toppings</div>
+        <div class="card-body">
+            <div class="card text-dark bg-light mb-3">
+                <div class="card-header">Choose Meats</div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item"><input type="checkbox" name="hand-tossed" id="hand-tossed"> Beef</li>
+                        <li class="list-group-item"><input type="checkbox" name="hand-tossed" id="hand-tossed"> Ham</li>
+                        <li class="list-group-item"><input type="checkbox" name="hand-tossed" id="hand-tossed"> Philly Steak</li>
+                        <li class="list-group-item"><input type="checkbox" name="hand-tossed" id="hand-tossed"> Bacon</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-body">
+            <div class="card text-dark bg-light mb-3">
+                <div class="card-header">Choose Non-Meats</div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item"><input type="checkbox" name="hand-tossed"> Green Peppers</li>
+                        <li class="list-group-item"><input type="checkbox" name="hand-tossed"> Mushrooms</li>
+                        <li class="list-group-item"><input type="checkbox" name="hand-tossed"> Onions</li>
+                        <li class="list-group-item"><input type="checkbox" name="hand-tossed"> Jalapeno Peppers</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-footer mb-3">
+            <button type="button" class="btn btn-primary float-right">Checkout</button>
+        </div>
+        </div>
+        </div>
+    </div>
 <!-- Main page content -->
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
