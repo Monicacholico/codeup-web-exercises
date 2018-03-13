@@ -12,21 +12,21 @@
 </head>
 <body>
     <div class="container fluid">
-        <div class="container alert-info">Skip to main content</div>
+        <div class="container alert-info p-3 text-center d-lg-none">Skip to main content</div>
         <div class="container fluid">
-            <h1>Company</h1>
+            <h1 class="text-center">Company</h1>
         </div>
             <ul class="nav justify-content-end">
-                <li class="nav-item"><a class="nav-link active" href="#">Home</a>
+                <li class="container fluid nav-item border border-dark bg-secondary text-center p-3 m-3 d-block"><a class="nav-link active" href="#"><span class="d-lg-inline">Home</span></a>
                 </li>
-                <li class="nav-item"><a class="nav-link active" href="#">About</a>
+                <li class="container fluid nav-item  border border-dark bg-secondary text-center p-3 m-3 d-lg-none"><a class="nav-link active" href="#">About</a>
                 </li>
-                <li class="nav-item"><a class="nav-link active" href="#">Work</a>
+                <li class="container fluid nav-item border border-dark bg-secondary text-center p-3 m-3 d-lg-none"><a class="nav-link active" href="#">Work</a>
                 </li>
-                <li class="nav-item"><a class="nav-link active" href="#">Contact</a>
+                <li class="container fluid nav-item border border-dark bg-secondary text-center p-3 m-3 d-lg-inline"><a class="nav-link active" href="#">Contact</a>
                 </li>
             </ul>
-        <div class="container fluid"><img src="http://lorempixel.com/g/500/300" alt=""></div>
+            <div class="container fluid"><img src="http://lorempixel.com/g/500/300" class="img-fluid" alt=""></div>
             <div class="container fluid">
                 <div class="row">
                     <div class="col-sm-8">
@@ -45,11 +45,11 @@
             </div>
         <footer>
             <p>(c) 2017 All rights reserved</p>
-            <!--<div class="container fluid" id="social-media-links">-->
-                <!--<a href="#"><img src="Instagram.png" </a>-->
-                <!--<a href="#"><img src="Snapchat.png" </a>-->
-                <!--<a href="#"><img src="Email.png" </a>-->
-            <!--</div>-->
+            <div class="media" id="social-media-links">
+                <a href="#"><img src="Instagram.png"  class="img-fluid max-width:50%; height: auto; float-right"></a>
+                <a href="#"><img src="Snapchat.png" class="img-fluid rounded float-right"></a>
+                <a href="#"><img src="Email.png" class="img-fluid rounded float-right"></a>
+            </div>
         </footer>
     </div>
 
