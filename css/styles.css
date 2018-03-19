@@ -1,17 +1,17 @@
 
-body{
+body {
     font-family: 'Rammetto One', cursive;
     background-color: antiquewhite;
     background-image: url(../img/dust_scratches.png);
     background-repeat: repeat;
 }
 
-header{
+header {
     text-align: center;
 }
 
-hr{
-    width: auto;
+hr {
+    width: 90%;
 }
 
 h1, h2 {
@@ -27,6 +27,7 @@ ul, ol, li {
 }
 
 table, th, td {
+    margin: 0 auto;
     padding: 10px;
     font-size: .5em;
     text-align: center;
@@ -45,7 +46,7 @@ a:visited {
     color: deeppink;
 }
 
-.first{
+.first {
     width: 300px;
     padding: 25px;
     float: left;
@@ -59,14 +60,14 @@ a:visited {
     position: relative;
     left: 400px;
 }
-.third{
+.third {
     width: 300px;
     padding: 25px;
     float: left;
     position: relative;
     left: 350px;
 }
-.article{
+.article {
     text-align: center;
     width: auto;
     height: auto;
