@@ -72,6 +72,12 @@ function myNumberTwo(number){
 
 console.log(myNumberTwo(3));
 
+// function myNumberTwo (random){
+//
+// }
+//
+// console.log(myNumberTwo());
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -99,10 +105,10 @@ console.log(calculateTip(" ", " "));
  * then display the dollar amount they should tip
  */
 
-var tip = prompt ("How percentage you want to tip?");
-var bill = prompt ("How much is your bill?");
-
-alert ("Ok! the amount to tip is " + calculateTip( tip, bill));
+// var tip = prompt ("How percentage you want to tip?");
+// var bill = prompt ("How much is your bill?");
+//
+// alert ("Ok! the amount to tip is " + calculateTip( tip, bill));
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -124,3 +130,174 @@ function applyDiscount (originalPrice, discountPercent) {
 }
 
 console.log(applyDiscount(100, .2));
+
+
+//Exercises for March 20, Class
+
+//Identity
+
+function Identity(name){
+    return name;
+
+}
+
+console.log(Identity ("Monica"));
+
+//isOdd
+
+function isOdd(randomNumber){
+    return (randomNumber % 2) === 1 ;
+}
+
+console.log(isOdd(3));
+
+// isEven
+
+function isEven (evenNumber){
+    return (evenNumber % 2) === 0;
+}
+
+console.log(isEven(5));
+
+// isPositive
+
+function isPositive (positiveNumber){
+    return positiveNumber >= 0 === true;
+}
+
+console.log(isPositive(2));
+
+//decrement
+
+function decrement(minusNumber){
+    return minusNumber -1;
+}
+
+console.log(decrement(6));
+
+//hasSpace
+
+function hasSpaces(anyString) {
+
+    // return !anyString.length && !anyString.indexOf === -1;
+    return anyString.indexOf(" ") > -1;
+}
+
+console.log(hasSpaces("Monica"));
+
+//isFive
+
+function isFive (anyNumber){
+    return anyNumber === 5;
+}
+
+console.log(isFive(5));
+
+//square
+
+function square(multipledNumber){
+
+    return multipledNumber * multipledNumber;
+
+}
+
+console.log(square(5));
+
+//cube
+
+function cube(potentialNumber){
+
+    return ((potentialNumber * potentialNumber) *potentialNumber);
+}
+
+console.log(cube(5));
+
+//half
+
+function half(halfNumber){
+
+    return halfNumber / 2;
+}
+
+console.log(half(8));
+
+//double
+
+function double(doubleNumber){
+
+    return doubleNumber * 2;
+}
+
+console.log(double(40));
+
+//isValidPassword
+
+// function isValidPassword (username, password){
+//
+//     return ((username.length >= 5) && (username.length <= 20)  &&  (password = !username.indexOf(0,20))
+//     && (!username.length (-1)) || (!password.length (-1)) === true;
+// }
+//
+// console.log(isValidPassword("codeup", "notastrongpassword"));
+//
+//isRightTriangle
+
+function isValidLogin(username, password) {
+
+    var isPasswordLongEnough = password.length > 5;
+    var isUsernameShortEnough = username.length < 20;
+    var passwordIncludesUsername = password.indexOf(username) !== -1;
+    var usernameHasWhitespace = username !== username.trim();
+    var passwordHasWhitespace = password !== password.trim();
+
+    // loose comparison == or !=
+    // strict comp === or !==
+
+
+    // var usernameHasWhitespace = username.length! = -1;
+    // var passwordHasWhitespace = password.length! = -1;
+
+
+    return (
+        isPasswordLongEnough &&
+        isUsernameShortEnough &&
+        !passwordIncludesUsername &&
+            !usernameHasWhitespace &&
+            !passwordHasWhitespace
+    );
+}
+
+
+
+// var a = 2 * 2;
+// var b = 4 * 4;
+// var c = 20 * 20;
+
+    // function isRigthTable (a, b, c){
+    // return a + b + c === 400;
+
+}
+
+function isRightTable1 (a, b, c) {
+        return (a * a) + (b * b) + (c * c);
+}
+
+
+console.log(isRigthTable( , , ));
+
+
+// Zach's Example has passowrd
+
+    function stringContains(haystack, needle) {
+        return  haystack.indexOf (needle) !== -1;
+    }
+
+    function hasWhitespace (string) {
+        return stringConstains(string, " ");
+    }
+
+
+    function getNumber (){
+
+        return parseFloat(prompt("Write a number"));
+}
