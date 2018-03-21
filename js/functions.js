@@ -72,11 +72,6 @@ function myNumberTwo(number){
 
 console.log(myNumberTwo(3));
 
-// function myNumberTwo (random){
-//
-// }
-//
-// console.log(myNumberTwo());
 
 /**
  * TODO:
@@ -105,10 +100,10 @@ console.log(calculateTip(" ", " "));
  * then display the dollar amount they should tip
  */
 
-// var tip = prompt ("How percentage you want to tip?");
-// var bill = prompt ("How much is your bill?");
-//
-// alert ("Ok! the amount to tip is " + calculateTip( tip, bill));
+var tip = prompt ("How percentage you want to tip?");
+var bill = prompt ("How much is your bill?");
+
+alert ("Ok! the amount to tip is " + calculateTip( tip, bill));
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -197,7 +192,7 @@ console.log(isFive(5));
 
 function square(multipledNumber){
 
-    return multipledNumber * multipledNumber;
+    return (multipledNumber * multipledNumber);
 
 }
 
@@ -247,16 +242,16 @@ function isValidLogin(username, password) {
     var isPasswordLongEnough = password.length > 5;
     var isUsernameShortEnough = username.length < 20;
     var passwordIncludesUsername = password.indexOf(username) !== -1;
-    var usernameHasWhitespace = username !== username.trim();
-    var passwordHasWhitespace = password !== password.trim();
+    var usernameHasWhitespace = username.length! = -1;
+    var passwordHasWhitespace = password.length! = -1;
 
     // loose comparison == or !=
     // strict comp === or !==
 
 
-    // var usernameHasWhitespace = username.length! = -1;
-    // var passwordHasWhitespace = password.length! = -1;
 
+    // var usernameHasWhitespace = username !== username.trim();
+    // var passwordHasWhitespace = password !== password.trim();
 
     return (
         isPasswordLongEnough &&
@@ -269,15 +264,6 @@ function isValidLogin(username, password) {
 
 
 
-// var a = 2 * 2;
-// var b = 4 * 4;
-// var c = 20 * 20;
-
-    // function isRigthTable (a, b, c){
-    // return a + b + c === 400;
-
-}
-
 function isRightTable1 (a, b, c) {
         return (a * a) + (b * b) + (c * c);
 }
@@ -288,16 +274,16 @@ console.log(isRigthTable( , , ));
 
 // Zach's Example has passowrd
 
-    function stringContains(haystack, needle) {
-        return  haystack.indexOf (needle) !== -1;
-    }
-
-    function hasWhitespace (string) {
-        return stringConstains(string, " ");
-    }
-
-
-    function getNumber (){
-
-        return parseFloat(prompt("Write a number"));
-}
+//     function stringContains(haystack, needle) {
+//         return  haystack.indexOf (needle) !== -1;
+//     }
+//
+//     function hasWhitespace (string) {
+//         return stringConstains(string, " ");
+//     }
+//
+//
+//     function getNumber (){
+//
+//         return parseFloat(prompt("Write a number"));
+// }
