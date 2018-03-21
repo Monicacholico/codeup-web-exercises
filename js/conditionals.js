@@ -85,8 +85,29 @@ var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 //Not sure if I need this and it doesn't work
-// function analyzeColor (randomcolor){
-//     return randomcolor + alert;
+
+function analyzeColor (color){
+
+if(color ==== "red"){
+    alert("Apples are red");
+} else if (color === "blue"){
+    alert("blue is the ocean");
+} else if (color === "yellow"){
+    alert("bananas are yellow");
+} else if ( color === "green"){
+    alert("grass is green");
+} else if ( color === "orange"){
+    alert("orange are Austin's sunsets")
+} else{
+    alert("I don't know anything about that color")
+}
+
+return alert;
+
+console.log(analyzeColor(color));
+
+
+//     return message;
 // }
 //
 // console.log(analyzeColor(randomColor));
@@ -179,32 +200,61 @@ if(randomColor === "blue"){
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+    // thi is the one Luis explained to me and it works :)
+// var luckyNumber = luckyNumber <= 5;
+// var luckyNumber = Math.floor(Math.random() * 6);
+// var totalAmount = 500;
+//
+//
+// console.log(luckyNumber, calculateTotal(luckyNumber, totalAmount));
+//
+//
+// function calculateTotal(luckyNumber, totalAmount) {
+//
+//     var discount = 0;
+//
+//     if(luckyNumber === 0){
+//         discount = 0;
+//     } else if (luckyNumber === 1){
+//         discount = .10 * totalAmount;
+//     } else if (luckyNumber === 2){
+//         discount = .20 * totalAmount;
+//     } else if (luckyNumber === 3){
+//         discount = .35 * totalAmount;
+//     } else if (luckyNumber === 4){
+//         discount = .50 * totalAmount;
+//     } else{
+//         discount = totalAmount;
+//     }
+//
+//
+//     var discountApplied = totalAmount - discount; // 100 - 3
+//
+//     return discountApplied;
+//
+// }
+//
+// console.log(calculateTotal(2,100));
 
-var luckyNumber = luckyNumber <= 5;
-var totalAmount = 100;
-var discountApplied = totalAmount - luckyNumber;
 
-function calculateTotal(luckyNumber, totalAmount) {
-    return discountApplied;
 
-}
+/// / SECOND TRY
+//     if (luckyNumber === 0){
+//         calculateTotal(0, 100); parseInt("totalAmount" - 0);
+//     } else if (luckyNumber === 1){
+//         calculateTotal(1, 100); parseInt("totalAmount" - .10);
+//     } else if (luckyNumber === 2){
+//         calculateTotal(2, 100); parseInt("totalAmount" - .25);
+//     } else if (luckyNumber === 3){
+//         calculateTotal(3, 100); parseInt("totalAmount" - .35);
+//     } else if (luckyNumber === 4){
+//         calculateTotal(4, 100); parseInt("totalAmount" - .50);
+//     } else{
+//         calculateTotal(5, 100); parseInt("totalAmount" - 1);
+//         }
 
-console.log(calculateTotal(2,100));
 
-    if (luckyNumber === 0){
-        calculateTotal(0, 100); parseInt("totalAmount" - 0);
-    } else if (luckyNumber === 1){
-        calculateTotal(1, 100); parseInt("totalAmount" - .10);
-    } else if (luckyNumber === 2){
-        calculateTotal(2, 100); parseInt("totalAmount" - .25);
-    } else if (luckyNumber === 3){
-        calculateTotal(3, 100); parseInt("totalAmount" - .35);
-    } else if (luckyNumber === 4){
-        calculateTotal(4, 100); parseInt("totalAmount" - .50);
-    } else{
-        calculateTotal(5, 100); parseInt("totalAmount" - 1);
-        }
-
+// THIRD TRY
 
     // if (luckyNumber === 0){
     //     parseInt(discountApplied);
@@ -220,6 +270,64 @@ console.log(calculateTotal(2,100));
     //      parseInt(discountApplied);
     //     }
 
+// FOURTH TRY
+
+// function calculateTotal(luckyNumber, totalAmount){
+//     return discountApplied
+// }
+//
+// console.log(calculateTotal(luckyNumber, totalAmount));
+//
+//
+//
+// if(luckyNumber === 1 && totalAmount > 0){
+//      discountApplied = (luckyNumber)
+// }
+//
+// var is
+// var discountTen = totalAmount - .10;
+// var discount25 = totalAmount - .25;
+// var discount35 = totalAmount - .35;
+// var discount50 = totalAmount - .50;
+
+
+var luckyNumber = Number(prompt("For a discount choose a number between 0 and 5"));
+var totalAmount = prompt("Whats your bill total?")
+
+var discount = 0;
+
+console.log(luckyNumber, calculateTotal(luckyNumber, totalAmount));
+
+
+function calculateTotal(luckyNumber, totalAmount) {
+
+
+    if(luckyNumber === 0){
+        discount = 0;
+        // alert ("Sorry you get 0 discount");
+    } else if (luckyNumber === 1){
+        discount = .10 * totalAmount;
+          } else if (luckyNumber === 2){
+        discount = .25 * totalAmount;
+          } else if (luckyNumber === 3){
+        discount = .35 * totalAmount;
+          } else if (luckyNumber === 4){
+        discount = .50 * totalAmount;
+          } else{
+        discount = totalAmount;
+
+    }
+
+    var discountApplied = totalAmount - discount; // 100 - 3
+
+    // return discountApplied;
+    return alert("You get a discount of " + discount + "% from your total of " + totalAmount + " , your final total is: " + discountApplied);
+
+}
+
+calculateTotal(luckyNumber,totalAmount);
+
+
 
 /**
  * TODO:
@@ -229,4 +337,4 @@ console.log(calculateTotal(2,100));
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
