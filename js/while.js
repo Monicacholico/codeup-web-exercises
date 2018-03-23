@@ -21,28 +21,13 @@ do {
     allCones = (allCones - isForCones);
     if(isForCones < allCones){
         console.log("I sold " + isForCones);
-    } else if (isForCones > allCones) {
+    } else if (isForCones >= allCones) {
         console.log("Sorry, I just have " + isForCones);
     } else {
-        console.log("Yay! I sold all the cones");
+
     }
 } while (allCones > 0);
 
-
-// FOR LOOPS EXERCISE
-
-
-
-// for (var i = a * 1, 1 <= 11; 1++) {
-//
-//     console.log ("This is multiplication table number" + i);
-//     }
-
-//
-//     for (var i = 1, j = 1, i < 10; j < 10, j++){
-//     console.log(i + "x" +  j + "=" + (i * j);)
-//     }
-// }
-
+console.log("Yay! I sold all the cones");
 
 
