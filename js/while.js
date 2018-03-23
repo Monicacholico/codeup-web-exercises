@@ -7,50 +7,42 @@ while (i < 65536) {
     console.log(i);
 }
 
-// ICECREAM EXERCISES
+// ICE CREAM EXERCISES
 
 var allCones = Math.floor(Math.random() * 50) + 50;
 // This expression will generate a random number between 1 and 5
-var isForCones = Math.floor(Math.random() * 5) + 1;
 
-// do{
-//     console.log(" = );
+// var allCones = 100;
+// var stock = allCones - isForCones;
+
+
+do {
+    var isForCones = Math.floor(Math.random() * 5) + 1;
+    allCones = (allCones - isForCones);
+    if(isForCones < allCones){
+        console.log("I sold " + isForCones);
+    } else if (isForCones > allCones) {
+        console.log("Sorry, I just have " + isForCones);
+    } else {
+        console.log("Yay! I sold all the cones");
+    }
+} while (allCones > 0);
+
+
+// FOR LOOPS EXERCISE
+
+
+
+// for (var i = a * 1, 1 <= 11; 1++) {
 //
+//     console.log ("This is multiplication table number" + i);
+//     }
+
 //
+//     for (var i = 1, j = 1, i < 10; j < 10, j++){
+//     console.log(i + "x" +  j + "=" + (i * j);)
+//     }
 // }
 
 
-// var i = 1;
-// do {
-//     console.log('while loop iteration #' + i);
-//     i++;
-// } while (i < 10);
-
-// do {
-//     console.log(stopSelling);
-//
-// } while (stopSelling = allCones);
-
-
-//
-//
-// do {
-//     console.log("We have " + allCones);
-//     allCones aler( );
-
-// var i = allCones;
-
- do {
-     // console.log("I have " + allCones);
-     console.log("I sold" + allCones);
-     if (isForCones <= 5){
-         console.log(isForCones + " cones sold");
-     } else if (isForCones === 5){
-             console.log("sorry, I only have " + isForCones );
-     } else{
-             console.log("Yay, I sold them all ")
-         }
-     } while (allCones > 0);
-
-// FOR LOOPS EXERCISE
 
