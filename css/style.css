@@ -1,7 +1,7 @@
 
 body {
     font-family: 'Rammetto One', cursive;
-    background-color: antiquewhite;
+    background-color: white;
     background-image: url(../img/dust_scratches.png);
     background-repeat: repeat;
 }
@@ -26,6 +26,11 @@ ul, ol, li {
     list-style-image: url("");
 }
 
+.portfolio{
+    display: inline-block;
+    list-style-type: none;
+}
+
 table, th, td {
     margin: 0 auto;
     padding: 10px;
@@ -39,7 +44,7 @@ a:link {
 }
 
 a:hover {
-    color: white;
+    color: darkgray;
 }
 
 a:visited {
