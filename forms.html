@@ -8,13 +8,14 @@
             margin: 25px;
         }
         textarea{
-            margin: 25px;
+            margin: 25px 0;
         }
+
     </style>
 </head>
 <body>
-    <div style="text-align: center";>
-        <h1 style="text-align: center";>Hey! Register with us!</h1>
+    <div style="text-align: center">
+        <h1 style="text-align: center">Hey! Register with us!</h1>
         <form method="POST" action="https://requestb.in/1knqhyl1">
 
             <label for="username">Username</label>
@@ -22,11 +23,12 @@
             <br>
 
             <label for="password">Password</label>
-            <input id="password" name="password" type="password">
+            <input id="password" name="password" type="password" value="password here">
             <br>
 
-
-            <textarea name="bio" id="bio" cols="50" rows="20">Bio</textarea>
+            <label for="bio">Write your bio below</label>
+            <br>
+            <textarea name="bio" id="bio" cols="50" rows="20" >Bio</textarea>
             <p>How did you hear about us?</p>
             <label for="option_1">Billboard</label>
             <input id="option_1" type="radio" name="options" value="Billboard" checked><br>
