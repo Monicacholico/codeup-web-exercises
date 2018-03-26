@@ -12,6 +12,20 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+  var name = {};
+        name.firstName = "Monica";
+        name.lastName = "Lopez";
+        name.sayHello = function(){
+            console.log("Hi from " + name.firstName + name.lastName);
+        };
+        name.sayHello();
+
+
+        var person = name;
+        console.log(name);
+        console.log(person.firstName);
+        console.log(person.lastName);
+
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -21,6 +35,7 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -36,11 +51,22 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    console.log("The first shopper is : " + shoppers[0].name);
+    console.log("The second shopper is : " + shoppers[1].name);
+    console.log("The third shopper is : " + shoppers[2].name);
+    // var discount = shoppers.amount * .88;
+    shoppers.forEach(function(shopper){
+            if (shopper.amount >= 200) {
+                console.log(shopper.name + " " + shopper.amount + " " + shopper.amount * .88);
+            }
+        });
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -54,6 +80,48 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+            {Title: "The Fountainhead",
+                Author: {
+                    firstName: "Ayn",
+                    lastName: "Ryand"
+                     }
+                },
+            {Title: "Apollos'Angels",
+                Author: {
+                    firstName: "Jennifer",
+                    lastName: "Homans"
+                     }
+                },
+            {Title: "The Handmaid's Tale",
+                Author:{
+                    firstName: "Margaret",
+                    lastName: "Atwood"
+                    }
+                },
+            {Title: "Bad Feminist",
+                Author:{
+                    firstName: "Roxane",
+                    lastName: "Gray"
+                }
+            },
+            {Title: "Javascript & Jquery",
+                Author:{
+                    firstName: "Jon",
+                    lastName: "Duckett"
+                }
+            }
+    ];
+
+    books.forEach(function(book){
+        if (shopper.amount >= 200) {
+            console.log(shopper.name + " " + shopper.amount + " " + shopper.amount * .88);
+        }
+    });
+
+
+
 
     /**
      * TODO:
