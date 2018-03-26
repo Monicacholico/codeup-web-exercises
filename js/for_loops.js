@@ -1,8 +1,8 @@
 // Multiplication exercise
 
 function showMultiplicationTable(number){
-
-    for (var i = 1; i < 11; i++){
+    var i;
+    for (i = 1; i < 11; i++){
     console.log(i + " x " + number + " = " + (parseInt(number)) * i);
 }
     return (parseInt(number)) * i;

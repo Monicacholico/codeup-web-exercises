@@ -1,0 +1,110 @@
+body {
+    background-color: #e6e6e6;
+    margin: 0;
+}
+
+.red {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background-color: #e6563b;
+    float: left;
+    border: solid 4px white;
+}
+.reds {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #e6563b;
+    float: right;
+    font-size: x-small;
+}
+.yellow {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background-color: #dd8800;
+    float:left;
+    border: solid 4px white;
+}
+
+.yellows {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #dd8800;
+    float: right;
+    font-size: x-small;
+
+}
+.green {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background-color: #7cb06c;
+    border: solid 4px white;
+}
+
+.greens {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: 00aba9;
+    float: right;
+    font-size: x-small;
+}
+.blue {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background-color: cadetblue;
+    border: solid 4px white;
+}
+
+.blues {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: cadetblue;
+    float: right;
+    font-size: x-small;
+}
+
+.textcircle {
+    position:relative;
+    top: 10px;
+    right: 10px;
+}
+
+.apple, .macbook {
+    width: 212px;
+    height: 140px;
+}
+
+.logo{
+    width: 105px;
+    height: 105px;
+}
+.featured-img{
+    font-size: x-small;
+}
+
+.littleimages {
+    float: left;
+}
+
+@media screen and (min-width: 425px;) {
+    h1, h2, p {
+        font-size: 1em;
+        margin:auto;
+        text-align: center;
+    }
+    .red, .yellow, .green,
+    .blue, {
+        width: 100px;
+        height: 100px;
+    }
+    .blue{
+        clear: left;
+    }
+}

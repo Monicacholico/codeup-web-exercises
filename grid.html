@@ -4,64 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device width, initial scale=1"
     <title>Grid</title>
-    <link rel="stylesheet" href="css/grid.css"
+    <style>
+        .container{
+            overflow: auto;
+            max-width: 1200px;
+        }
+        .row{
+            overflow: auto;
+        }
+        .column {
+            float: left;
+        }
+
+        .col-1-third {
+            width: 33%;
+            background-color: gray;
+        }
+        .col-2-third {
+            width: 66%;
+            background-color: red;
+        }
+        .col-1-half {
+            width: 50%;
+            background-color: pink;
+        }
+        footer{
+
+        }
+    </style>
+    <!--<link rel="stylesheet" href="css/grid.css"-->
+
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="column one-half">1/2</div>
-            <div class="column one-half">1/2</div>
-        </div>
-        <div class="row">
-            <div class="column one-third">1/3</div>
-            <div class="column one-third">1/3</div>
-            <div class="column one-third">1/3</div>
-        </div>
-        <div class="row">
-            <div class="column one-fourth">1/4</div>
-            <div class="column one-fourth">1/4</div>
-            <div class="column one-fourth">1/4</div>
-            <div class="column one-fourth">1/4</div>
-        </div>
-        <div class="row">
-            <div class="column one-eighth">1/8</div>
-            <div class="column one-eighth">1/8</div>
-            <div class="column one-eighth">1/8</div>
-            <div class="column one-eighth">1/8</div>
-            <div class="column one-eighth">1/8</div>
-            <div class="column one-eighth">1/8</div>
-            <div class="column one-eighth">1/8</div>
-            <div class="column one-eighth">1/8</div>
-        </div>
-        <div class="row">
-            <div class="column one-fourth">1/4</div>
-            <div class="column one-half">1/2</div>
-            <div class="column one-eighth">1/8</div>
-            <div class="column one-eighth">1/8</div>
-        </div>
-        <div class="row">
-            <div class="column one-third">1/3</div>
-            <div class="column two-thirds">2/3</div>
-        </div>
-        <div class="row">
-            <div class="column three-eighth">3/8</div>
-            <div class="column one-eighth">1/8</div>
-            <div class="column one-eighth">1/8</div>
-            <div class="column one-eighth">1/8</div>
-            <div class="column one-eighth">1/8</div>
-            <div class="column one-eighth">1/8</div>
-        </div>
-        <div class="row">
-            <div class="column two-fourth">2/4</div>
-            <div class="column one-fourth">1/4</div>
-            <div class="column one-fourth">1/4</div>
-        </div><div class="row">
-            <div class="column three-sixth">3/6</div>
-            <div class="column one-sixth">1/6</div>
-            <div class="column one-sixth">1/6</div>
-            <div class="column one-sixth">1/6</div>
-        </div>
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+            <!--<div class="column one-half">1/2</div>-->
+            <!--<div class="column one-half">1/2</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="column one-third">1/3</div>-->
+            <!--<div class="column one-third">1/3</div>-->
+            <!--<div class="column one-third">1/3</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="column one-fourth">1/4</div>-->
+            <!--<div class="column one-fourth">1/4</div>-->
+            <!--<div class="column one-fourth">1/4</div>-->
+            <!--<div class="column one-fourth">1/4</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="column one-eighth">1/8</div>-->
+            <!--<div class="column one-eighth">1/8</div>-->
+            <!--<div class="column one-eighth">1/8</div>-->
+            <!--<div class="column one-eighth">1/8</div>-->
+            <!--<div class="column one-eighth">1/8</div>-->
+            <!--<div class="column one-eighth">1/8</div>-->
+            <!--<div class="column one-eighth">1/8</div>-->
+            <!--<div class="column one-eighth">1/8</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="column one-fourth">1/4</div>-->
+            <!--<div class="column one-half">1/2</div>-->
+            <!--<div class="column one-eighth">1/8</div>-->
+            <!--<div class="column one-eighth">1/8</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="column one-third">1/3</div>-->
+            <!--<div class="column two-thirds">2/3</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="column three-eighth">3/8</div>-->
+            <!--<div class="column one-eighth">1/8</div>-->
+            <!--<div class="column one-eighth">1/8</div>-->
+            <!--<div class="column one-eighth">1/8</div>-->
+            <!--<div class="column one-eighth">1/8</div>-->
+            <!--<div class="column one-eighth">1/8</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="column two-fourth">2/4</div>-->
+            <!--<div class="column one-fourth">1/4</div>-->
+            <!--<div class="column one-fourth">1/4</div>-->
+        <!--</div><div class="row">-->
+            <!--<div class="column three-sixth">3/6</div>-->
+            <!--<div class="column one-sixth">1/6</div>-->
+            <!--<div class="column one-sixth">1/6</div>-->
+            <!--<div class="column one-sixth">1/6</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+        <!--This is the class of Monday 12 March, 2018-->
+
+   <div class="container">
+    <div class="row">
+    <aside class="column col-1-third">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci dicta dolore earum error excepturi laborum modi nobis officiis omnis quam recusandae reiciendis reprehenderit saepe sit, soluta tempora temporibus vero.
+    </aside>
     </div>
+    <main>
+    <div class="row">
+        <section class="column col-2-third">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet commodi consequuntur, deserunt dignissimos, fugiat inventore minus praesentium, quas qui rerum vitae voluptas voluptatum. Beatae, distinctio dolore ipsum odit vitae voluptatum.
+        </section>
+        <section class="column col-1-half">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet commodi consequuntur, deserunt dignissimos, fugiat inventore minus praesentium, quas qui rerum vitae voluptas voluptatum. Beatae, distinctio dolore ipsum odit vitae voluptatum.
+        </section>
+        <section class="column col-1-half">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet commodi consequuntur, deserunt dignissimos, fugiat inventore minus praesentium, quas qui rerum vitae voluptas voluptatum. Beatae, distinctio dolore ipsum odit vitae voluptatum.
+        </section>
+    </div>
+    </main>
+   </div>
+    <footer>
+
+    </footer>
 
 </body>
 </html>

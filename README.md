@@ -11,3 +11,28 @@
 7. "git add README.md"
 8.Commit your changes: "git commit -m "docs: Add initial notes about using git""
 9. Push to Github 'git push origin master'
+
+
+## HTML
+* ** Goal** structure documents
+* Main components
+    -Elements
+    * tags (opening and, optinoally a closing tag)
+    *attributes
+        -name, value (key-valuepairs)
+        -value its between quotes
+        -value is optional, for instance 'checked', 'selected'
+    *contents, if its text or more elemnts, or both
+    -Types of elements
+        *Inline -> span stron, em, input
+        *Block -> div h1 ul, p
+        *Void ->  br (block), img (inline), hr (block)
+## CSS
+
+* ** Goal ** Visual style of a page
+
+
+    -float
+    -postioining -> relative or absolute        
+ 
+          

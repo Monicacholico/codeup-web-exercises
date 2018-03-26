@@ -132,6 +132,15 @@ function calculateTotal(luckyNumber, billTotal) {
 alert("Your final total is: " + (calculateTotal(luckyNumber, billTotal)));
 
 
+// WHILE LOOP EXERCISES
+
+var isTwoTimes = 2;
+while(isTwoTimes < 65536){
+    console.log(isTwoTimes *= 2);
+}
+
+
+
 // // TRYING B O N U S L O O P S
 
 for( var i = 99; i >=1; i-=1){
@@ -144,21 +153,12 @@ if(i <= 99 && i >= 2){
 }
 console.log("There's no more beer bottles left" );
 
-// for (var i = 99; i >=0; i-=i){
-//     do()
-// }
 
-// for (var i = 100; i >=1; i -=1){
-//     console.log(i)
-// }
-//
-// do{
-//     console.log(i + " beer bottles standing on the wall, but one beer bottle is falling from the wall");
-// if(i === 1){
-//     console.log( i + " beer bottle standing on the wall");
-// } else{
-//     console.log( i + " beer bottle standing on the wall")
-// }
-//
-// }while( i > 1);
-// console.log( i + " beer bottles standing on the wall");
+function multiplicationTable(number){
+    for(var i = 1; i <=10; i++){
+        console.log(number + "x" + i + "=" + parseInt(number) * i);
+    }
+    return (parseInt(number)) * 1;
+}
+multiplicationTable(8);
+

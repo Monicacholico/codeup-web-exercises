@@ -37,6 +37,21 @@
         console.log("These are the names on the array " + names);
     }
 
+    // different examples in Luis Class
+
+    names.forEach(function(name, index, array){
+        console.log(name);
+    });
+    names.forEach(showName);
+
+
+function showName(name, i, array){
+    console.log(name);
+    console.log(i);
+    console.log(array);
+
+}
+
     // names.forEach(function(name){
     //     console.log("Here are the names " + names);
     // }
@@ -61,6 +76,8 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+
+
     var numbers =[1, 2, 3, 4, 5];
 
     function first(array){
@@ -80,8 +97,5 @@
     }
 
     console.log(last(numbers));
-
-
-
-
+    
 })();
