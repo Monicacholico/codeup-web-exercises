@@ -1,35 +1,31 @@
 *{
     padding: 0;
 }
-.alert-info {
+.alert-info{
     background-color: azure;
     text-align: center;
     padding: 1em;
     border: solid 2px #808080;
     text-decoration: none;
 }
-
-h1 {
+h1{
     text-align: center;
 }
-
-.nav-links li {
+.nav-links li{
     background-color: darkgray;
     text-align: center;
     padding: 1em;
     margin: 2px;
     list-style-type: none;
 }
-
-.header-img img {
-    width: 100%;
+.header-img img{
+    /*width: 100%;*/
 }
 
-.main {
+.main{
     padding: 5px;
 }
-
-.sub-section {
+.sub-section{
     padding: 5px;
 }
 
@@ -38,8 +34,7 @@ h1 {
     height: 25px;
     float: right;
 }
-
-footer p {
+footer p{
     float: left;
 }
 
@@ -57,20 +52,21 @@ footer p {
         float: right;
         background-color: transparent;
     }
-    ul {
+    ul{
         margin: 0;
     }
 
-    .main {
-        width: 60%;
-        margin-right: 0;
-        float: left;
+    .main{
+        /*width: 60%;*/
+        /*margin-right: 0;*/
+        /*float: left;*/
         /*position: relative;*/
     }
-    .sub-section {
-        width: 30%;
-        float: left;
+    .sub-section{
+        /*width: 30%;*/
+        /*float: left;*/
         /*position: relative;*/
     }
+
 
 }
