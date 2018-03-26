@@ -1,0 +1,4 @@
+.overlay {
+    overflow: visible;
+    z-index: 2;
+}
