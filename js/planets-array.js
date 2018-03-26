@@ -19,22 +19,32 @@
      */
 
     console.log('Adding "The Sun" to the beginning of the planets array.');
+    planets.unshift("The sun");
     console.log(planets);
 
     console.log('Adding "Pluto" to the end of the planets array.');
+    planets.push("Pluto");
     console.log(planets);
 
     console.log('Removing "The Sun" from the beginning of the planets array.');
+    planets.shift("The sun");
     console.log(planets);
 
     console.log('Removing "Pluto" from the end of the planets array.');
+    planets.pop("Pluto");
     console.log(planets);
 
     console.log('Finding and logging the index of "Earth" in the planets array.');
+    var index = planets.indexOf("Earth");
+    console.log(index);
 
     console.log("Reversing the order of the planets array.");
     console.log(planets);
+    planets.reverse();
+    console.log(planets);
 
     console.log("Sorting the planets array.");
+    console.log(planets);
+    planets.sort();
     console.log(planets);
 })();
