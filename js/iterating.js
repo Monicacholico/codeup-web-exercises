@@ -47,7 +47,7 @@
 
 function showName(name, i, array){
     console.log(name);
-    console.log(i);
+    console.log(index);
     console.log(array);
 
 }
