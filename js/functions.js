@@ -16,11 +16,10 @@ function sayHello (name){
 
 sayHello("Codeup");
 
-// var sayHello = "Monica";?
 
 
 
-// sayHello("Monica");
+sayHello("Monica");
 
 /**
  * TODO:
@@ -127,9 +126,9 @@ function applyDiscount (originalPrice, discountPercent) {
 console.log(applyDiscount(100, .2));
 
 
-//Exercises for March 20, Class
+// ============ EXERCISES CLASS MARCH 20 =====================
 
-//Identity
+// ========= Identity =================
 
 function Identity(name){
     return name;
@@ -138,7 +137,7 @@ function Identity(name){
 
 console.log(Identity ("Monica"));
 
-//isOdd
+// ========== isOdd ===================
 
 function isOdd(randomNumber){
     return (randomNumber % 2) === 1 ;
@@ -146,7 +145,7 @@ function isOdd(randomNumber){
 
 console.log(isOdd(3));
 
-// isEven
+// ========== isEven ================
 
 function isEven (evenNumber){
     return (evenNumber % 2) === 0;
@@ -154,7 +153,7 @@ function isEven (evenNumber){
 
 console.log(isEven(5));
 
-// isPositive
+// ======== isPositive =============
 
 function isPositive (positiveNumber){
     return positiveNumber >= 0 === true;
@@ -162,7 +161,7 @@ function isPositive (positiveNumber){
 
 console.log(isPositive(2));
 
-//decrement
+//========== decrement ==============
 
 function decrement(minusNumber){
     return minusNumber -1;
@@ -170,7 +169,7 @@ function decrement(minusNumber){
 
 console.log(decrement(6));
 
-//hasSpace
+// =========== hasSpace ===============
 
 function hasSpaces(anyString) {
 
@@ -180,7 +179,7 @@ function hasSpaces(anyString) {
 
 console.log(hasSpaces("Monica"));
 
-//isFive
+// ============ isFive ==================
 
 function isFive (anyNumber){
     return anyNumber === 5;
@@ -188,7 +187,7 @@ function isFive (anyNumber){
 
 console.log(isFive(5));
 
-//square
+// =============== square =================
 
 function square(multipledNumber){
 
@@ -198,7 +197,7 @@ function square(multipledNumber){
 
 console.log(square(5));
 
-//cube
+// =============== cube =======================
 
 function cube(potentialNumber){
 
@@ -207,7 +206,7 @@ function cube(potentialNumber){
 
 console.log(cube(5));
 
-//half
+// =============== half =======================
 
 function half(halfNumber){
 
@@ -216,7 +215,7 @@ function half(halfNumber){
 
 console.log(half(8));
 
-//double
+// =============== double ====================
 
 function double(doubleNumber){
 
@@ -225,17 +224,8 @@ function double(doubleNumber){
 
 console.log(double(40));
 
-//isValidPassword
+// ============== isValidPassword ===========
 
-// function isValidPassword (username, password){
-//
-//     return ((username.length >= 5) && (username.length <= 20)  &&  (password = !username.indexOf(0,20))
-//     && (!username.length (-1)) || (!password.length (-1)) === true;
-// }
-//
-// console.log(isValidPassword("codeup", "notastrongpassword"));
-//
-//isRightTriangle
 
 function isValidLogin(username, password) {
 
@@ -245,13 +235,6 @@ function isValidLogin(username, password) {
     var usernameHasWhitespace = username.length! = -1;
     var passwordHasWhitespace = password.length! = -1;
 
-    // loose comparison == or !=
-    // strict comp === or !==
-
-
-
-    // var usernameHasWhitespace = username !== username.trim();
-    // var passwordHasWhitespace = password !== password.trim();
 
     return (
         isPasswordLongEnough &&
@@ -261,6 +244,16 @@ function isValidLogin(username, password) {
             !passwordHasWhitespace
     );
 }
+
+// ============== NOTES FROM ZACH ==========================
+
+// loose comparison == or !=
+// strict comp === or !==
+
+
+// ============== OTHER WAY TO DO THE WHITE SPACE ==========
+// var usernameHasWhitespace = username !== username.trim();
+// var passwordHasWhitespace = password !== password.trim();
 
 
 
@@ -272,7 +265,7 @@ function isRightTable1 (a, b, c) {
 console.log(isRigthTable( , , ));
 
 
-// Zach's Example has passowrd
+//================= ZACH'S OTHER EXAMPLE FOR HAS PASSWORD ==================
 
 //     function stringContains(haystack, needle) {
 //         return  haystack.indexOf (needle) !== -1;
