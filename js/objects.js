@@ -85,7 +85,7 @@
             {Title: "The Fountainhead",
                 Author: {
                     firstName: "Ayn",
-                    lastName: "Ryand"
+                    lastName: "Rand"
                      }
                 },
             {Title: "Apollos'Angels",
@@ -114,13 +114,16 @@
             }
     ];
 
-    books.forEach(function(book){
-        if (shopper.amount >= 200) {
-            console.log(shopper.name + " " + shopper.amount + " " + shopper.amount * .88);
-        }
+
+         books.forEach(function(book, index){
+            console.log("Book # " + index + "\n"  + "Title" + " " + book.Title + "\n " + "Author" + " " + book.Author.firstName + " " + book.Author.lastName);
+
     });
 
-
+    function createBook(Title,Author){
+        return books.Title + books.Author;
+    }
+    console.log(createBook([0]));
 
 
     /**
@@ -158,5 +161,7 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
 
 })();
