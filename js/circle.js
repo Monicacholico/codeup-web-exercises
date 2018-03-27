@@ -1,26 +1,51 @@
-(function() {
+(function () {
     "use strict";
 
     // create a circle object
     var circle = {
-        radius: 3,
-
+        radius: 5,
         getArea: function () {
-            // TODO: complete this method
-            // hint: area = pi * radius^2
-
-            return; // TODO: return the proper value
+            return Math.PI * circle.radius * circle.radius;
         },
 
-        logInfo: function (doRounding) {
-            // TODO: complete this method.
+        // circle.getArea();
 
+
+        // getArea: function (circle) {
+
+        // (Math.sqrt(2)(Math.PI * circle.radius));
+
+        // TODO: complete this method
+        // hint: area = pi * radius^2
+
+        // return;  TODO THE PROPER VALUE
+        // },
+
+
+        logInfo: function (doRounding) {
+            // TODO: complete this method
+            var Area = this.getArea();
+            if (doRounding) {
+
+                Area = Math.round(Area);
+            }
+
+            // doRo
             // If doRounding is true, round the result to the nearest integer.
             // Otherwise, output the complete value
-
-            console.log("Area of a circle with radius: " + this.radius + ", is: ");
+            console.log("Area of a circle with radius: " + this.radius + ", is: " + Area);
         }
     };
+ var object ={
+     foo: function () {
+     }
+ };
+
+    function foo() {
+        this.bar = function (area) {
+
+        }
+    }
 
     // log info about the circle
     console.log("Raw circle information");
