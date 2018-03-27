@@ -16,15 +16,30 @@
         name.firstName = "Monica";
         name.lastName = "Lopez";
         name.sayHello = function(){
-            console.log("Hi from " + name.firstName + name.lastName);
+            console.log("!Hi from " + name.firstName + name.lastName);
         };
         name.sayHello();
+        // console.log(sayHello(this.firstName, this.lastName));
 
 
         var person = name;
         console.log(name);
         console.log(person.firstName);
         console.log(person.lastName);
+
+        // DIFFERENT WAYS TO DO AN ARRAY
+        //==================== ONE =================================
+        // var person = {firstName: "Monica", lastName: "Lopez"};
+        //
+        //==================== TWO =================================
+        // var person ={};
+        //     person["firstName"] = "Monica";
+        //     person["lastName"] = "Lopez";
+        //
+        // =================== THREE ===============================
+        // var person ={};
+        // person.firstName = "Monica";
+        // person.lastName = "Lopez";
 
     /**
      * TODO:
@@ -57,15 +72,42 @@
         {name: 'George', amount: 320}
     ];
 
-    console.log("The first shopper is : " + shoppers[0].name);
-    console.log("The second shopper is : " + shoppers[1].name);
-    console.log("The third shopper is : " + shoppers[2].name);
+    console.log("The first shopper is : " + shoppers[0].name + " and the discount is $0.00");
+    console.log("The second shopper is : " + shoppers[1].name + " and the discount is $30.00");
+    console.log("The third shopper is : " + shoppers[2].name + " and the discount is $38.40");
     // var discount = shoppers.amount * .88;
     shoppers.forEach(function(shopper){
             if (shopper.amount >= 200) {
-                console.log(shopper.name + " " + shopper.amount + " " + shopper.amount * .88);
+                console.log(shopper.name + " has a total amount of " + shopper.amount.toFixed(2) + " and a discount of " + (shopper.amount * .88).toFixed(2));
             }
         });
+
+// =================== EXERCISE WITH A FOR LOOP =========================
+
+
+
+    for(var i = 0; i < shoppers.length; i++){
+        var total = shoppers[i].amount;
+        var discount = 0;
+        if (shoppers[i].amount > 200){
+            total = (shoppers[i].amount * .88);
+            discount = (shoppers[i].amount * .12);
+        }
+        console.log( shoppers[i].name + " bought $" + shoppers[i].amount.toFixed(2) + " , the discount is $" + discount.toFixed(2) + " and the total is $" + total.toFixed(2)
+        )
+    }
+
+// ================ TO GENERATE THE CONSOLE.LOG MESSAGE AND USE IT IN THE FOOREACH LOOP ===============
+
+// function generateTotalMessage(shopper){
+//         if(shopper.amount > 200){
+//             total = (shopper.amount * .88);
+//             discount = shopper.amount * .12;
+//         }
+//         return shopper.name + " bought $" + shopper.amount.toFixed(2) +
+//             ", the discount is $" + discount.toFixed(2) +
+//             " and the total is $" + total.toFixed(2)
+// }
 
 
     /** TODO:
@@ -88,45 +130,102 @@
                     lastName: "Rand"
                      }
                 },
+            // createBook("The Fountainhead", "Ayn", "Rand"),
             {Title: "Apollos'Angels",
                 Author: {
                     firstName: "Jennifer",
                     lastName: "Homans"
                      }
                 },
+            // createBook("Apollo's Angels", "Jennifer", "Hoffman"),
             {Title: "The Handmaid's Tale",
                 Author:{
                     firstName: "Margaret",
                     lastName: "Atwood"
                     }
                 },
+            // createBook("The Handmaid's Tale", "Margaret", "Atwood"),
             {Title: "Bad Feminist",
                 Author:{
                     firstName: "Roxane",
                     lastName: "Gray"
                 }
             },
+            // createBook("Bad Feminist", "Roxane", "Gray"),
             {Title: "Javascript & Jquery",
                 Author:{
                     firstName: "Jon",
                     lastName: "Duckett"
                 }
             }
+            // createBook("Javascript & Jquery", "Jon", "Duckett"),
     ];
 
 
-         books.forEach(function(book, index){
-            console.log("Book # " + index + "\n"  + "Title" + " " + book.Title + "\n " + "Author" + " " + book.Author.firstName + " " + book.Author.lastName);
+
+
+    books.forEach(function(book, index){
+        console.log("Book # " + index + "\n"  +
+            "Title" + " " + book.Title + "\n " + "Author" + " "
+            + book.Author.firstName + " " + book.Author.lastName);
 
     });
 
-    function createBook(Title,Author){
-        return books.Title + books.Author;
+
+
+    //  =================== EXERCISE WITH A FOR LOOP (LUIS) ===========================
+
+    // for (var i = 0; i < books.length; i++){
+    //     console.log("Book # " + (i + 1));
+    //     console.log("Title: " + books[i].title);
+    //     console.log("Author: " + books[i].author.firstName + " " + books[i].lastName);
+    // }
+    //
+
+
+    //  ======================= BONUS EXERCISE ========================================
+
+
+    function createBook(title, firstName, lastName) {
+        return books.push({title: title, author: {
+                firstName: firstName,
+                lastName: lastName
+            }});
     }
-    console.log(createBook([0]));
+
+    createBook("The second sex", "Simone",  "de Beauvoir");
+    console.log(books);
+
+    // ======================= BONUS EXERCISES WITH LUIS ======================
 
 
+   //  function createBook (title, author){
+   //      var name = author. split(" ");
+   //      return {title: title, author: {
+   //          firstName: name[0],
+   //              lastName: name[1]
+   //          }}
+   //  }
+   //
+   //  function showBookInfo(book, index){
+   //      console.log("Book # " + (index + 1));
+   //      console.log("Title: " + book.title);
+   //      console.log("Author: " + book.butho.firstName + " " + book.author.lastName);
+   //  }
+   //
+   //  books.forEach(showBookInfo);
+   //
+   // // ==============  TO ADD OBJECTS ===========================
+   //
+   //  books.push(createBook("title", "author"));
+   //
+   //  // ================ TO REPLACE OBJECTS =====================
+   //
+   //
+   //  books[i] = createBook("title", "author");
+   //
     /**
+     *
      * TODO:
      * Loop through the books array and output the following information about
      * each book:
@@ -163,5 +262,29 @@
      */
 
 
+//    ====================================================================================================
+// EXERCISE WITH JAMES
+
+
+// function createBook(title, firstName, lastName) {
+//     return books.push({title: title, author: {
+//             firstName: firstName,
+//             lastName: lastName
+//         }});
+// }
+//
+// createBook("The second sex", "Simone" ,  "de Beauvoir");
+// console.log(books);
+// ========================================================================================================
+// EXERCISE WITH LUIS
+
+// function createBook(newTitle, newAuthor) {
+//     var book = {title: newTitle, author: newAuthor};
+//
+//     return book + {title: "The second sex", author: "Simone de Beauvoir"}
+// }
+// console.log("This is a new book: " + {title: "The second sex", author: "Simone de Beauvoir"});
+//
+// createBook("The second sex", "Simone de Beauvoir");
 
 })();
