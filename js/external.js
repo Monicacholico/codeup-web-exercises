@@ -2,6 +2,8 @@
 
 // Code here
 
+// ====================== FIRST EXERCISES ================================
+
 console.log("Hello from external JavaScript");
 
 alert("Welcome to my website");
@@ -10,7 +12,6 @@ var color = prompt("What's your favorite color?");
 
 alert(" Wow, " + color + " is my favorite color too!!!" );
 
-//This is the other exercise
 
 // ================= EXERCISE 1 =====================================
 
