@@ -55,6 +55,8 @@ if (userEntry % 2 === 0 && userEntry >= 0) {
 else {
     alert("Hey you're not entering a number");
 }
+
+// ================== THIS IS THE SAME EXERCISE WITH DIFFERENT STRUCTURE =====================
 //
 // function inpuNumber(message){
 //     var input = prompt(message);
@@ -74,7 +76,7 @@ else {
 //
 // function addOneHundred(){
 //
-//     alert(number)
+//     alert(number + 100);
 // }
 
 
@@ -209,7 +211,8 @@ switch(analyzeColor) {
      * Test your function by passing it various values and checking for the expected
      * return value.
      */
-        // thi is the one Luis explained to me and it works :)
+        // ========== THIS EXERCISE IS THE FIRST TRY is the one Luis explained to me and it works :)==========
+
 // var luckyNumber = luckyNumber <= 5;
 // var luckyNumber = Math.floor(Math.random() * 6);
 // var totalAmount = 500;
@@ -246,94 +249,71 @@ switch(analyzeColor) {
 // console.log(calculateTotal(2,100));
 
 
-/// / SECOND TRY
-//     if (luckyNumber === 0){
-//         calculateTotal(0, 100); parseInt("totalAmount" - 0);
-//     } else if (luckyNumber === 1){
-//         calculateTotal(1, 100); parseInt("totalAmount" - .10);
-//     } else if (luckyNumber === 2){
-//         calculateTotal(2, 100); parseInt("totalAmount" - .25);
-//     } else if (luckyNumber === 3){
-//         calculateTotal(3, 100); parseInt("totalAmount" - .35);
-//     } else if (luckyNumber === 4){
-//         calculateTotal(4, 100); parseInt("totalAmount" - .50);
-//     } else{
-//         calculateTotal(5, 100); parseInt("totalAmount" - 1);
-//         }
 
-
-// THIRD TRY
-
-        // if (luckyNumber === 0){
-        //     parseInt(discountApplied);
-        // } else if (luckyNumber === 1){
-        //      parseInt(discountApplied);
-        // } else if (luckyNumber === 2){
-        //      parseInt(discountApplied);
-        // } else if (luckyNumber === 3){
-        //      parseInt(discountApplied);
-        // } else if (luckyNumber === 4){
-        //      parseInt(discountApplied);
-        // } else{
-        //      parseInt(discountApplied);
-        //     }
-
-// FOURTH TRY
-
-// function calculateTotal(luckyNumber, totalAmount){
-//     return discountApplied
-// }
-//
-// console.log(calculateTotal(luckyNumber, totalAmount));
-//
-//
-//
-// if(luckyNumber === 1 && totalAmount > 0){
-//      discountApplied = (luckyNumber)
-// }
-//
-// var is
-// var discountTen = totalAmount - .10;
-// var discount25 = totalAmount - .25;
-// var discount35 = totalAmount - .35;
-// var discount50 = totalAmount - .50;
-
+    //============= THIS EXERCISE IS FOR MY FURTHER REVIEW, IT WAS WORKING WELL AND THEN STOP WORKING ==============
 
     // var luckyNumber = Number(prompt("For a discount choose a number between 0 and 5"));
-    var totalAmount = prompt("Whats your bill total?")
+    // var totalAmount = prompt("Whats your bill total?")
+    //
+    // var discount = 0;
+    //
+    // console.log(luckyNumber, calculateTotal(luckyNumber, totalAmount));
+    //
+    //
+    // function calculateTotal(luckyNumber, totalAmount) {
+    //
+    //
+    //     if (luckyNumber === 0) {
+    //         discount = 0;
+    //         // alert ("Sorry you get 0 discount");
+    //     } else if (luckyNumber === 1) {
+    //         discount = .10 * totalAmount;
+    //     } else if (luckyNumber === 2) {
+    //         discount = .25 * totalAmount;
+    //     } else if (luckyNumber === 3) {
+    //         discount = .35 * totalAmount;
+    //     } else if (luckyNumber === 4) {
+    //         discount = .50 * totalAmount;
+    //     } else {
+    //         discount = totalAmount;
+    //
+    //     }
+    //
+    //     var discountApplied = totalAmount - discount; // 100 - 3
+    //
+    //     return alert("You get a discount of " + discount + "% from your total of " + totalAmount + " , your final total is: " + discountApplied);
+    //
+    // }
+    //
+    // calculateTotal(luckyNumber, totalAmount);
 
-    var discount = 0;
+    //==================== WALMART EXERCISE WITH FUNCTION AND SWICTH====================
 
-    console.log(luckyNumber, calculateTotal(luckyNumber, totalAmount));
+    var luckyNumber = Math.floor(Math.random() * 6);
+    var billTotal = prompt("What's the total of your bill?");
+    alert("Your lucky number is " + luckyNumber);
 
+    function calculateTotal(luckyNumber, billTotal) {
 
-    function calculateTotal(luckyNumber, totalAmount) {
-
-
-        if (luckyNumber === 0) {
-            discount = 0;
-            // alert ("Sorry you get 0 discount");
-        } else if (luckyNumber === 1) {
-            discount = .10 * totalAmount;
-        } else if (luckyNumber === 2) {
-            discount = .25 * totalAmount;
-        } else if (luckyNumber === 3) {
-            discount = .35 * totalAmount;
-        } else if (luckyNumber === 4) {
-            discount = .50 * totalAmount;
-        } else {
-            discount = totalAmount;
-
+        switch (luckyNumber) {
+            case 0:
+                return billTotal;
+            case 1:
+                return billTotal - (billTotal * .1);
+            case 2:
+                return billTotal * .75;
+            case 3:
+                return billTotal * .65;
+            case 4:
+                return billTotal * .5;
+            case 5:
+                return 0;
         }
-
-        var discountApplied = totalAmount - discount; // 100 - 3
-
-        // return discountApplied;
-        return alert("You get a discount of " + discount + "% from your total of " + totalAmount + " , your final total is: " + discountApplied);
-
+        return luckyNumber + billTotal;
     }
 
-    calculateTotal(luckyNumber, totalAmount);
+    alert("Your final total is: " + (calculateTotal(luckyNumber, billTotal)));
+
 
 
     /**
