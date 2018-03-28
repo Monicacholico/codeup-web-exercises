@@ -37,7 +37,6 @@
         console.log("These are the names on the array " + names);
     }
 
-    // different examples in Luis Class
 
     names.forEach(function(name, index, array){
         console.log(name);
@@ -51,6 +50,8 @@ function showName(name, i, array){
     console.log(array);
 
 }
+
+    // different examples in Luis Class
 
     // names.forEach(function(name){
     //     console.log("Here are the names " + names);
