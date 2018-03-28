@@ -8,12 +8,6 @@
             return Math.PI * circle.radius * circle.radius;
         },
 
-        // circle.getArea();
-
-
-        // getArea: function (circle) {
-
-        // (Math.sqrt(2)(Math.PI * circle.radius));
 
         // TODO: complete this method
         // hint: area = pi * radius^2
@@ -36,16 +30,18 @@
             console.log("Area of a circle with radius: " + this.radius + ", is: " + Area);
         }
     };
- var object ={
-     foo: function () {
-     }
- };
 
-    function foo() {
-        this.bar = function (area) {
-
-        }
-    }
+ // =========== EXAMPLES FROM LUIS ABOUT A FUNCTION AND A METHOD =======================
+ // var object ={
+ //     foo: function () {
+ //     }
+ // };
+ //
+ //    function foo() {
+ //        this.bar = function (area) {
+ //
+ //        }
+ //    }
 
     // log info about the circle
     console.log("Raw circle information");
