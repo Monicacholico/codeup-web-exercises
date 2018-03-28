@@ -1,5 +1,7 @@
 "use strict";
 
+// ================ FIRST EXERCISE OF LOOPS ==================
+
 var i = 1;
 
 while (i < 65536) {
@@ -7,7 +9,7 @@ while (i < 65536) {
     console.log(i);
 }
 
-// ICE CREAM EXERCISES
+// ================ ICE CREAM EXERCISES ======================
 
 var allCones = Math.floor(Math.random() * 50) + 50;
 // This expression will generate a random number between 1 and 5
