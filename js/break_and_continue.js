@@ -1,5 +1,7 @@
 "use strict";
 
+// ================== BREAK & CONTINUE EXERCISE =====================
+
 function isNumeric(x) {
     return !isNaN(parseFloat(x));
 }
@@ -8,11 +10,9 @@ function isOdd(input){
     return isNumeric(input) && input % 2 !==0;
 }
 
-function  isOdd(input){
-    return isNumeric(input) && input %2 !== 0;
-}
 
 var number;
+
 do {
     number = parseFloat(prompt("Please input an odd number between 1 and 50"));
     if (isOdd(number) &&  (number < 50 && number >= 1)) {
