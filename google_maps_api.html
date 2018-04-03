@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Maps API</title>
+
+    <style>
+        #map-canvas{
+            width: 800px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="map-canvas"></div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL8LuyfD-k-yXPGU4QB4hnXdFL4XUF2Cs"></script>
+<script>
+    var mapOptions = {
+        zoom: 19,
+        center: {
+            lat: 29.426791,
+            lng: -98.489602
+        }
+    };
+    var mapCanvas =document.getElementById("map-canvas");
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+
+
+    var geocoder = new google.maps.Geocoder();
+
+    var address = {
+        address: "300 Alamo Plaza, San Antonio, TX, 78205",
+    };
+
+    function callback(results, status){
+        if (status === google.maps.GeocoderStatus.OK) {
+            console.log(results);
+            // Recenter the map over the address
+            map.setCenter(results[0].geometry.location);
+
+        } else {
+
+            // Show an error message with the status if our request fails
+            alert("Geocoding was not successful - STATUS: " + status);
+        }
+
+    }
+
+    geocoder.geocode(address, callback);
+
+
+
+</script>
+</body>
+</html>
