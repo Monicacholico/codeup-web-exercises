@@ -54,3 +54,31 @@ function isPositive (positiveNumber){
 }
 
 console.log(isPositive(-9));
+
+var expenses = [
+    {itemName: "macbook pro", cost: "$2,400"},
+    {itemName: "raspberry pi", cost: "$60"},
+    {itemName: "Dell XPS laptop", cost: "$1,200"}
+];
+    /*changing the variable to the top of the function changes the results
+    Change the var totalcost before totalcost += and it will change the results
+     */
+
+var totalcost = 0;
+ expenses.forEach(function(expense){
+     expense.cost = expense.cost.replace("$","");
+     expense.cost = expense.cost.replace(",","");
+     totalcost += parseFloat(expense.cost);
+     var avg = totalcost / expense.cost.length;
+
+     console.log( totalcost/ expense.cost.length);
+     console.log("the total cost for " + expense.itemName + " is : " + totalcost + " and the average is: " + avg);
+
+ });
+
+
+//  function notString(expense){
+//      var  totalcost = (expense[0].cost.toFixed(2) + expense[1].cost.toFixed(2) + expense.cost.toFixed(2));
+// console.log("this is the final cost " + totalcost)
+//  }
+// // notString(expenses.cost);
