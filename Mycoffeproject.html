@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-$END$
+<div class="container-fluid">
+    <div class="row">
+        <h1 class="m-auto">Coffee!</h1>
+    </div>
+    <div><hr></div>
+    <div class="row">
+        <div class="col-12">
+            <div class="col-6 float-right">
+                <form class="col col-form float-right mb-3">
+                    <label for="roast-selection" class="col-6 col-form-label col-form-label-lg font-weight-bold">Roast</label>
+                    <select id= "roast-selection" class="custom-select my-1 mb-3">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <label for="roast-selection" class="font-weight-bold pl-1">Coffee Name</label>
+                    <input id="roast-selection" class="form-control" onclick="renderCoffee()" type="text">
+                    <button id="submit" type="submit" class="btn btn-primary btn-sm btn-block my-1 mt-3">Submit</button>
+                </form>
+                <div class="mt-5">
+                    <h1 class="m-auto text-center">Add a Coffee</h1>
+                </div>
+                <form class="col col-form float-right mt-3">
+                    <label for="roast-selection" class="col-6 col-form-label col-form-label-lg font-weight-bold">Roast</label>
+                    <select id= "roast-selection" class="custom-select my-1 mb-3">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <label for="coffee-name" class="font-weight-bold pl-1">Name</label>
+                    <input id="coffee-name" class="form-control" type="text" aria-label="Search">
+                    <button id="submit" type="submit" class="btn btn-primary btn-sm btn-block my-1 mt-3">Submit</button>
+                </form>
+            </div>
+            <div class="col-6 h-50">
+                <div id="coffees" class="col-6 w-25 h-100 d-inline float-left" style="height: 800px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/coffeproject.js"></script>
 </body>
 </html>

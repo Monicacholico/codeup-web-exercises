@@ -27,7 +27,7 @@
         console.log(person.firstName);
         console.log(person.lastName);
 
-        // DIFFERENT WAYS TO DO AN ARRAY
+        // DIFFERENT WAYS TO DO AN OBJECT
         //==================== ONE =================================
         // var person = {firstName: "Monica", lastName: "Lopez"};
         //
@@ -97,7 +97,7 @@
         )
     }
 
-// ================ TO GENERATE THE CONSOLE.LOG MESSAGE AND USE IT IN THE FOOREACH LOOP ===============
+// ================ TO GENERATE THE CONSOLE.LOG MESSAGE AND USE IT IN THE FOREACH LOOP ===============
 
 // function generateTotalMessage(shopper){
 //         if(shopper.amount > 200){
@@ -210,7 +210,7 @@
    //  function showBookInfo(book, index){
    //      console.log("Book # " + (index + 1));
    //      console.log("Title: " + book.title);
-   //      console.log("Author: " + book.butho.firstName + " " + book.author.lastName);
+   //      console.log("Author: " + book.author.firstName + " " + book.author.lastName);
    //  }
    //
    //  books.forEach(showBookInfo);
@@ -278,13 +278,13 @@
 // ========================================================================================================
 // EXERCISE WITH LUIS
 
-// function createBook(newTitle, newAuthor) {
-//     var book = {title: newTitle, author: newAuthor};
-//
-//     return book + {title: "The second sex", author: "Simone de Beauvoir"}
-// }
-// console.log("This is a new book: " + {title: "The second sex", author: "Simone de Beauvoir"});
-//
-// createBook("The second sex", "Simone de Beauvoir");
+function createBook(newTitle, newAuthor) {
+    var book = {title: newTitle, author: newAuthor};
+
+    return book + {title: "The second sex", author: "Simone de Beauvoir"}
+}
+console.log("This is a new book: " + {title: "The second sex", author: "Simone de Beauvoir"});
+
+createBook("The second sex", "Simone de Beauvoir");
 
 })();

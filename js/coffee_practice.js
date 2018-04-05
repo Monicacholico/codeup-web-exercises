@@ -24,17 +24,18 @@
             }
         }
 
-    var listener = function (event) {
-        tableCapezio.innerHTML = tableBloch;
-    };
     var tableCapezio = document.getElementsByClassName("capezio");
+    var listener = function (event) {
+        tableCapezio.style.visibility = "visible";
+    };
+    document.getElementById('btn1').addEventListener('click', listener, false);
 
-        function unhide(tableCapezio){
-        if(tableCapezio.className=(capezio === "hidden"){
-        } document.getElementById('btn1').addEventListener('click', listener, false);
-            tableCapezio.style.visibility = "visible";
-        }
-        unhide(tableCapezio);
+        // function unhide(tableCapezio){
+        // if(tableCapezio.className=(capezio === "hidden"){
+        // } document.getElementById('btn1').addEventListener('click', listener, false);
+        //     tableCapezio.style.visibility = "visible";
+        // }
+        // unhide(tableCapezio);
 
 
     var tableBloch = document.getElementsByClassName("bloch");
