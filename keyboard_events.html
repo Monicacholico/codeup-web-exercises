@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--THIS IS FROM LUIS CLASS-->
+<!--<section>-->
+    <!--<p>Please type something into this form:</p>-->
+    <!--<form>-->
+        <!--<input type="text" id="textfield" name="textfield" placeholder="Type Here"/>-->
+    <!--</form>-->
+<!--</section>-->
+<h1>Konami Code</h1>
+
+<script src="/js/jquery.js"></script>
+<script>
+    "use strict";
+
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+    });
+
+
+    // ============== THIS IS AN EXAMPLE FROM LUIS CLASS ON KEYBOARD EVENTS ========
+    // $("#textfield").keydown(function (event){
+    //
+    //     var currentValue = $(this).val();
+    //     console.log(currentValue);
+    //     console.log(isNaN(currentValue));
+    //
+    //     if(isNaN(currenValue) === false){
+    //         $(".error").html("");
+    //     }
+    //     if (event.keyCode < 48 || event.keyCode > 57){
+    //         $(".error").html("That is not a digit").css("color", "red");
+    //     }
+    // })
+</script>
+</body>
+</html>
