@@ -30,31 +30,39 @@
         if(inputEmpty === cobra){
             $("body").css({"background-color": "hotpink"});
             alert("you get 30 lives!");
-        } else{
-            alert("you're not entering the right konami code!")
         }
         });
 
 // ============ THIS IS RYANS EXAMPLE TO RESOLVE IT ===============
 
-    const konamiCode = [
-        "ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft",
-        "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"
-    ];
+    // const konamiCode = [
+    //     "ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft",
+    //     "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"
+    // ];
+    //
+    // $(body).keydown(function(event){
+    // //    Step 1. define the win codition
+    // //    Commit to some wishful thinkging:
+    // //    let's pretend that we got the entire sequence correct
+    // //    up to, but not including the very last sequence member
+    // //    assume the last correct key was clicked
+    // //    how do we figure that out?
+    // =======  didnt work =======================
+    //     if (event.key) == konamiCode[konamiCode.length -1]){
+    //         alert("yay! 30 lives");
+    //     } else{
+    //     alert("You're not entering the right code");
+    // }
+    // })
+// ============= WITH A FOR LOOP THAT WORKED ==============================
+//     var i = 0;
+//     $("body").keydown(function(event){
+//         if((i == (konamiCode.length -1)) && event.key == konamicode[konamiCode.length -1])
+//         {
+//             alert("yay! 30 lives");
+//         }
+//     })
 
-    $(body).keydown(function(event){
-    //    Step 1. define the win codition
-    //    Commit to some wishful thinkging:
-    //    let's pretend that we got the entire sequence correct
-    //    up to, but not including the very last sequence member
-    //    assume the last correct key was clicked
-    //    how do we figure that out?
-        if (event.key) == konamiCode[konamiCode.length -1]){
-            alert("yay! 30 lives");
-        } else{
-        alert("You're not entering the right code");
-    }
-    })
 
 
 </script>
