@@ -61,6 +61,25 @@
         }
     );
 
+    function highlight(){
+        $("p").css("background-color", "yellow");
+       }
+
+    $("#highlight").on("click", highlight);
+
+
+var colors = ["pink", "green", "goldenrod", "papayawhip"];
+var i = 0;
+$("h2").hover(function(){
+    $(this).css({
+        "background-color": colors[i % colors.length],
+        "cursor": "help"
+    });
+    i++;
+});
+
+
+
 
 
 
