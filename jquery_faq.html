@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>jQuery FAQ</title>
     <style>
+        .container{
+            width: 100%;
+            margin: 30px;
+        }
+
         .invisible{
             font-size: 14px;
             display: none;
@@ -11,73 +16,84 @@
         .highlight{
             background-color: yellow;
         }
-        p {
-            margin: 4px;
-            font-size: 16px;
-            font-weight: bolder;
-            cursor: pointer;
-        }
-        .blue {
-            color: blue;
-        }
-        .highlight {
-            background: yellow;
-        }
     </style>
 </head>
 
 <body>
-<dl>
-    <dt>1. How old is the National Park System?</dt>
-    <dd class="invisible">The National Park Service was created by an
-        act signed by President Woodrow Wilson on August
-        25, 1916. Yellowstone National Park was established
-        by an act signed by President Ulysses S. Grant on
-        March 1, 1872, as the nation's first national park.
-        View the National Park System timeline.</dd>
-    <dt>2. What is the origin of the National Park Service arrowhead?</dt>
-    <dd class="invisible">The arrowhead was authorized as the official National
-        Park Service emblem by the Secretary of the Interior on
-        July 20, 1951. The components of the arrowhead may have
-        been inspired by key attributes of the National Park
-        System, with the sequoia tree and bison representing
-        vegetation and wildlife, the mountains and water
-        representing scenic and recreational values, and the
-        arrowhead itself representing historical and archeological
-        values. </dd>
-    <dt>3. How many areas are in the National Park System?</dt>
-    <dd class="invisible">The system includes 417 areas covering more than 84 million
-        acres in every state, the District of Columbia, American
-        Samoa, Guam, Puerto Rico, and the Virgin Islands.
-        These areas include national parks, monuments, battlefields,
-        military parks, historical parks, historic sites, lakeshores,
-        seashores, recreation areas, scenic rivers and trails,
-        and the White House. Learn more about national park designations.</dd>
-    <dt>4. What is the largest national park site? </dt>
-    <dd class="invisible">Largest: Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres</dd>
-    <dt>5. What is the smallest national park site? </dt>
-    <dd class="invisible">Smallest: Thaddeus Kosciuszko National Memorial, PA, at 0.02 acres</dd>
-    <dt>6. What is the most-visited national park?</dt>
-    <dd class="invisible">View a list of the most-visited sites in the National Park Service.</dd>
-    <dt>7. How many people visit the national parks?</dt>
-    <dd class="invisible">Total recreation visitors to the national parks in 2017: 330,882,751</dd>
-    <dt>8. Where can I find a park map?</dt>
-    <dd class="invisible">You can view maps on specific park websites or download maps from the
-        Harpers Ferry Center map collection.</dd>
-    <dt>9. Can I bring my pet to a national park?</dt>
-    <dd class="invisible">Some national parks welcome pets—in developed areas, on many trails
-        and campgrounds, and in some lodging facilities. Learn more about pets in parks.</dd>
-    <dt>10. What do I need to know about driving off road in national parks?</dt>
-    <dd class="invisible">Before you head out, check with the national parks that you intend to visit.
-        In many national parks, off-road driving is illegal. Where off-road driving
-        is allowed, the National Park Service regulates it.</dd>
-</dl>
+<div class="container">
+    <section class="section-faq">
+    <dl>
+        <dt>1. How old is the National Park System?</dt>
+        <dd class="invisible">The National Park Service was created by an
+            act signed by President Woodrow Wilson on August
+            25, 1916. Yellowstone National Park was established
+            by an act signed by President Ulysses S. Grant on
+            March 1, 1872, as the nation's first national park.
+            View the National Park System timeline.</dd>
+        <dt>2. What is the origin of the National Park Service arrowhead?</dt>
+        <dd class="invisible">The arrowhead was authorized as the official National
+            Park Service emblem by the Secretary of the Interior on
+            July 20, 1951. The components of the arrowhead may have
+            been inspired by key attributes of the National Park
+            System, with the sequoia tree and bison representing
+            vegetation and wildlife, the mountains and water
+            representing scenic and recreational values, and the
+            arrowhead itself representing historical and archeological
+            values. </dd>
+        <dt>3. How many areas are in the National Park System?</dt>
+        <dd class="invisible">The system includes 417 areas covering more than 84 million
+            acres in every state, the District of Columbia, American
+            Samoa, Guam, Puerto Rico, and the Virgin Islands.
+            These areas include national parks, monuments, battlefields,
+            military parks, historical parks, historic sites, lakeshores,
+            seashores, recreation areas, scenic rivers and trails,
+            and the White House. Learn more about national park designations.</dd>
+        <dt>4. What is the largest national park site? </dt>
+        <dd class="invisible">Largest: Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres</dd>
+        <dt>5. What is the smallest national park site? </dt>
+        <dd class="invisible">Smallest: Thaddeus Kosciuszko National Memorial, PA, at 0.02 acres</dd>
+        <dt>6. What is the most-visited national park?</dt>
+        <dd class="invisible">View a list of the most-visited sites in the National Park Service.</dd>
+        <dt>7. How many people visit the national parks?</dt>
+        <dd class="invisible">Total recreation visitors to the national parks in 2017: 330,882,751</dd>
+        <dt>8. Where can I find a park map?</dt>
+        <dd class="invisible">You can view maps on specific park websites or download maps from the
+            Harpers Ferry Center map collection.</dd>
+        <dt>9. Can I bring my pet to a national park?</dt>
+        <dd class="invisible">Some national parks welcome pets—in developed areas, on many trails
+            and campgrounds, and in some lodging facilities. Learn more about pets in parks.</dd>
+        <dt>10. What do I need to know about driving off road in national parks?</dt>
+        <dd class="invisible">Before you head out, check with the national parks that you intend to visit.
+            In many national parks, off-road driving is illegal. Where off-road driving
+            is allowed, the National Park Service regulates it.</dd>
+    </dl>
+    </section>
+    <section class="section-lists">
+        <h3>Yellowstone Park</h3>
+        <ul id="yellowstone">
+            <li>It has an active volcano</li>
+            <li>It has thousands of petrified trees</li>
+            <li>It has almost 300 waterfalls</li>
+            <li>It's the oldest National Park</li>
+        </ul>
+        <h3>Seneca Falls Park</h3>
+        <ul id="seneca">
+            <li>It held the firs Women's rights conventions</li>
+            <li>It includes an education and cultural center</li>
+            <li>It was established in 1980</li>
+            <li>It's the second most visited attraction in Seneca Falls, NY</li>
+        </ul>
+        <h3>Wrangell-St. Elias</h3>
+        <ul id="wrangell">
+            <li>It's in Alaska</li>
+            <li>It's the largest National Park</li>
+            <li>It's larger than Switzerland</li>
+            <li>It covers 3 different climate zones</li>
+        </ul>
+        <button type="button">Highlight facts</button>
+    </section>
 
-    <p class="blue">Click to toggle</p>
-    <p class="blue highlight">highlight</p>
-    <p class="blue">on these</p>
-    <p class="blue">paragraphs</p>
-
+</div>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="js/jquery_faq.js"></script>
 </body>
