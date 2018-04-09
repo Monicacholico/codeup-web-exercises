@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>jQuery FAQ</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <style>
         .container {
             width: 100%;
-            margin: 30px;
+            margin: 10px;
         }
 
         .invisible {
@@ -17,16 +20,18 @@
             background-color: yellow;
         }
         .section-frames {
+            width: 100%;
             text-align: center;
             margin: 20px;
         }
-        .row{
+        .row {
             text-align: center;
-            margin:auto 100px;
+            margin:auto 150px;
             width: 100%;
+            height: 225px;
             display: flex;
         }
-        button{
+        button {
             width: 100px;
             height: 50px;
             background-color: #c6a59d;
@@ -34,13 +39,16 @@
             border-radius: 10%;
             font-weight: bold;
         }
-        .swap-button{
+        .swap-button {
             margin: auto 150px;
         }
         #yellowstone, #wrangell, #seneca {
             display: none;
         }
-        #register{
+        #register {
+            display: none;
+        }
+        .modal {
             display: none;
         }
 
@@ -49,11 +57,19 @@
 
 <body>
 <div class="container">
-    <div>
+    <div id="first-div" class="alert alert-danger" role="alert">
         <h1>Would you like to sign up for our newsletter?</h1>
         <span><strong>X</strong></span>
-        <h2 id="register">Would you like to register for this site?</h2>
     </div>
+    <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Register</button>-->
+    <!--<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">-->
+        <!--<div class="modal-dialog modal-sm">-->
+            <!--<div class="modal-content">Would you like to register for this site?-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+        <h2 id="register">Would you like to register for this site?</h2>
+
     <section class="section-faq">
     <dl>
         <dt>1. How old is the National Park System?</dt>
@@ -137,6 +153,18 @@
             <button id="swap-button2" type="button">Swap</button>
             <button id="swap-button3" type="button">Swap</button>
             </div>
+        </div>
+    </section>
+    <section class="lorem-section">
+        <div class="row">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                A animi beatae dicta hic id officiis omnis placeat quisquam,
+                sequi voluptatem. Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Ad aut commodi dolorum eos ipsa minus
+                molestias possimus repellat tenetur totam! Lorem ipsum
+                dolor sit amet, consectetur adipisicing elit. Aliquid dicta
+                doloremque fugiat fugit magni placeat sint totam veritatis
+                voluptas voluptatibus!</p>
         </div>
     </section>
 
