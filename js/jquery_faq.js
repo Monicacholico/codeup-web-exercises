@@ -1,13 +1,11 @@
 (function() {
-"use strict";
+    "use strict";
 
 
-$('dt').click(function() {
-    $("dd").toggleClass("invisible");
-    $(this).toggleClass("highlight");
-});
-
-
+    $('dt').click(function () {
+        $("dd").toggleClass("invisible");
+        $(this).toggleClass("highlight");
+    });
 
 
 // $('.text').hide();
@@ -21,29 +19,42 @@ $('dt').click(function() {
 // };
 
 
-$("#list-button").click(function(){
-    $('li').each(function(index){
-        if (index % 4 === 0 ) {
-            $(this).next().next().next().css('background-color', '#FF0');
-        }
+    $("#list-button").click(function () {
+        $('li').each(function (index) {
+            if (index % 4 === 0) {
+                $(this).next().next().next().css('background-color', '#FF0');
+            }
+        });
     });
-});
 
-// $("h3").click(function(){
-//     $("li").each(function(i){
-//         if(i % 4 === 0){
-//         $(this).css("font-weight", "bold");
-//         }
-//     })
-//     });
+$("h3").click(function(){
+    $("li").each(function(i){
+        if(i % 4 === 0){
+        $(this).css("font-weight", "bold");
+        }
+    })
+    });
 
-    $("li").click(function(){
-        $("li").each(function(i){
-            if(i % 4 === 0){
+    // RYAN'S EXAMPLE
+
+    // $("h3").click(function(){
+    //
+    // });
+
+    $("li").click(function () {
+        $("li").each(function (i) {
+            if (i % 4 === 0) {
                 $(this).css("color", "blue");
             }
         })
     });
+
+    // =============== THIS IS RYAN'S EXAMPLE ======================
+    //
+    // $("li").click (function() {
+    //     $(this).parent().children().first().css("color", "blue")
+    //
+    // };
 
 
 
@@ -91,6 +102,11 @@ $("#list-button").click(function(){
 
     $("#swap-button3").click(function(){
         $("img").each(function(i){
+            if( i === 2){
+                $("img").last().animate({
+                        marginLeft: "-1125px"},
+                    500);
+            }
             if(i === 0){
                 $("img").first().animate({
                         marginRight: "225px"},
@@ -98,22 +114,26 @@ $("#list-button").click(function(){
             }
             if(i === 1){
                 $("#frame2").animate({
-                        marginRight: "450px"},
+                        marginRight: "225px"},
                     500);
             }
-            if( i === 2){
-                $("img").last().animate({
-                        marginLeft: "-1575px"},
-                    500);
-            }
+
         })
     });
 
     // =========== THIS IS FOR THE H1 =======================
 
     $("span").click(function(){
-        $("h1").hide();
+        $("#first-div").hide();
+        // $(this).hide();
     });
+
+
+    //============== RYANS SOLUTION =======================
+
+    // $("span").click(function(event){
+    //     $(event.target).parent().hide();
+    // });
 
     //============ THESE ARE THE FOR THE UL FACTS ============
 
@@ -128,7 +148,15 @@ $("#list-button").click(function(){
 
     $("h3").last().click(function(){
         $("#wrangell").toggle();
-    })
+    });
+
+
+    // ============ RYANS SOLUTION ======================
+
+    // $("ul").hide();
+    // $("h3").click(function(){
+    //     $(this).next().slideToggle();
+    // });
 
 
     // =========== THIS IS FOR THE H2 FADE IN ================
@@ -137,10 +165,13 @@ $("#list-button").click(function(){
     $("#register").fadeIn(8000);
 
 
+// ================= RYANS EXAMPLE =======================
+//     setTimeout(function(){
+//         $("#register").fadeIn();},
+//         8000)
 
 
-
-    // ============ TRYING TO DO IT WITH TOGGLE ===========
+    // ============ TRYING TO DO SWAPPING IMAGES WITH TOGGLE ===========
 
     // $("#swap-button1").click(function(){
     //     $("img").first().animate({
