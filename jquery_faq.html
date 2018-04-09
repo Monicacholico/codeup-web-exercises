@@ -4,23 +4,56 @@
     <meta charset="UTF-8">
     <title>jQuery FAQ</title>
     <style>
-        .container{
+        .container {
             width: 100%;
             margin: 30px;
         }
 
-        .invisible{
+        .invisible {
             font-size: 14px;
             display: none;
         }
         .highlight{
             background-color: yellow;
         }
+        .section-frames {
+            text-align: center;
+            margin: 20px;
+        }
+        .row{
+            text-align: center;
+            margin:auto 100px;
+            width: 100%;
+            display: flex;
+        }
+        button{
+            width: 100px;
+            height: 50px;
+            background-color: #c6a59d;
+            margin: 20px;
+            border-radius: 10%;
+            font-weight: bold;
+        }
+        .swap-button{
+            margin: auto 150px;
+        }
+        #yellowstone, #wrangell, #seneca {
+            display: none;
+        }
+        #register{
+            display: none;
+        }
+
     </style>
 </head>
 
 <body>
 <div class="container">
+    <div>
+        <h1>Would you like to sign up for our newsletter?</h1>
+        <span><strong>X</strong></span>
+        <h2 id="register">Would you like to register for this site?</h2>
+    </div>
     <section class="section-faq">
     <dl>
         <dt>1. How old is the National Park System?</dt>
@@ -76,7 +109,7 @@
             <li>It has almost 300 waterfalls</li>
             <li>It's the oldest National Park</li>
         </ul>
-        <h3>Seneca Falls Park</h3>
+        <h3 id="seneca-falls">Seneca Falls Park</h3>
         <ul id="seneca">
             <li>It held the firs Women's rights conventions</li>
             <li>It includes an education and cultural center</li>
@@ -90,7 +123,21 @@
             <li>It's larger than Switzerland</li>
             <li>It covers 3 different climate zones</li>
         </ul>
-        <button type="button">Highlight facts</button>
+        <button id="list-button" type="button">Highlight facts</button>
+    </section>
+    <section class="section-frames">
+        <div class="row">
+            <div id="frame1"><img src="img/Milliners.jpeg" alt="Degas-Milliners" height="225" width="225"></div>
+            <div id="frame2"><img src="img/l'etoile.jpg" alt="Degas-l'etoile" height="225" width="225"></div>
+            <div id="frame3"><img src="img/Coppelia.jpg" alt="Degas-Coppelia" height="225" width="225"></div>
+        </div>
+        <div class="row">
+            <div class="swap-button">
+            <button id="swap-button1" type="button">Swap</button>
+            <button id="swap-button2" type="button">Swap</button>
+            <button id="swap-button3" type="button">Swap</button>
+            </div>
+        </div>
     </section>
 
 </div>
