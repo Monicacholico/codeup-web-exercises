@@ -30,5 +30,43 @@
             "tool"
         ],
         "price": 10
-    }
+    }, {
+    "title": "Ratchets",
+    "quantity": 12,
+    "categories": [
+        "tool"
+    ],
+    "price": 40
+},{
+    "title": "Scalers",
+    "quantity": 15,
+    "categories": [
+        "tool"
+    ],
+    "price": 50
+},{
+    "title": "Nut Splitters",
+    "quantity": 35,
+    "categories": [
+        "tool"
+    ],
+    "price": 28
+},{
+    "title": "Splitters",
+    "quantity": 13,
+    "categories": [
+        "tool",
+        "outdoor"
+    ],
+    "price": 18
+},{
+    "title": "Saws",
+    "quantity": 35,
+    "categories": [
+        "tool",
+        "wood"
+    ],
+    "price": 24
+}
+
 ]
