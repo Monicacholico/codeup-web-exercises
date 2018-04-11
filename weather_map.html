@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: skyblue;
+        }
+        .border{
+            border: 1px solid black;
+            height: 250px;
+            background-color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="align-conten-center">
+<h1 class="text-center bg-secondary fluid m-0 p-0 align-content-center" style="height: 100px">Weather Application</h1>
+</div>
+<h2 class="m-3">San Antonio</h2>
+<div class="container-fluid">
+
+    <section id="fw" class="container-fluid align-content-center">
+
+
+    </section>
+
+
+
+
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    (function() {
+        "use strict";
+
+        // ================================ THESE ARE LUIS EXAMPLES FROM CLASS
+
+        // var request = $.get("http://api.openweathermap.org/data/2.5/weather", {
+        //     APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
+        //     q:     "San Antonio"
+        // });
+        //
+        // request.done(function(response){
+        //     console.log(response);
+        //     console.log(response.main.humidity);
+        //     console.log(response.main.temp_max);
+        //     console.log(response.main.temp_min);
+        // });
+        //
+        //
+        // $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+        //     APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
+        //     lat: 29.423017,
+        //     lon: -98.48527,
+        //     units: "imperial",
+        //     cnt: 3
+        // }).done(function(response){
+        //     console.log(response);
+        //     // console.log(response.list[])
+        //
+        // });
+
+
+        // THIS IS THE TRY ==========================================
+
+        // clouds:
+        //     main:
+        //         wind:
+        //             humidity: 95
+
+        //
+        // var key = "8f32c0149a278cdb5f995fbb3d98eba5";
+        // // var city = "San Antonio";
+        // var url = "http://api.openweathermap.org/data/2.5/forecast/daily";
+
+    //     var request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily",{
+    //         APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
+    //         // q:  "San Antonio",
+    //         lat: 29.423017,
+    //         lon: -98.49
+    //
+    //
+    //     succees: function(data){
+    //         console.log("Received data:", data)
+    //         var wf= "";
+    //         wf +="<h2>" + data.city.name + "</h2>";
+    //         $.each(data.list, function(index, val){
+    //             (wf).append("<p>" + "<b>Day" + index
+    //                 + "</b>:" + data.main.temp + "&degC" + "<span> |"
+    //                 + val.weather[0].description + "</span>"
+    //                 + "<p>" + data.clouds + "</p>"
+    //                 + "<p>" + data.main.humidity + "</p>"
+    //                 + "<p>" + data.wind + "</p>"
+    //                 + "<p>" + data.main.pressure + "</p>")
+    //         });
+    //         $("#weather").html(wf);
+    //     }
+    //     request.fail(onerror);
+    // });
+
+        // SECOND TRY
+
+        var request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+            APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
+            lat: 29.423017,
+            lon: -98.49,
+            cnt: 3
+        });
+
+        request.done(function(response) {
+            console.log(response);
+            response.list.forEach(function(data) {
+               console.log(data);
+                $("#fw").append("<div class='row inline-flex justify-content-center float-left m-3'><div class='col-12 border rounded border-dark bg-secondary m-0' style='height: 400px; width:300px'>" +
+                    + "<h2>" + data.temp.max + "&degC" + "<strong>/</strong>"
+                    + data.temp.min + "&degC" + "</h2>"
+                        + "<p><img src='Weather_SunAbstract.png' height='150px' width='150px'></p>"
+                    // + "<p>"+ data.weather[0].icon + "</p>"
+                    + "<p>" + data.weather[0].main + "</p>"
+                    + "<p>" + data.weather[0].description + "</p>"
+                    + "<p>" + data.humidity + "</p>"
+                    + "<p>" + data.pressure + "</p></div></div>")
+            });
+        });
+        request.fail(onerror);
+
+
+
+        // $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+        //     APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
+        //     lat: 29.423017,
+        //     lon: -98.49
+        // }).done(function(data){
+        //     $(".day_one").append("<div class='col-sm'>" +
+        //         + "<h2>" + data.weather + "&degC" + "</h2>"
+        //         + "<p>" + data.clouds + "</p>"
+        //         + "<p>" + data.name + "</p>"
+        //         + "<p>" + data.wind + "</p>"
+        //         + "<p>" + data.pressure + "</p></div>");
+        //     console.log(data);
+        // });
+        //
+        //
+        // $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+        //     APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
+        //     lat: 29.423017,
+        //     lon: -98.49
+        // }).done(function(data){
+        //     $(".day_two").append("<div class='col-sm'>" +
+        //         + "<h2>" + data.weather + "&degC" + "</h2>"
+        //         + "<p>" + data.clouds + "</p>"
+        //         + "<p>" + data.name + "</p>"
+        //         + "<p>" + data.wind + "</p>"
+        //         + "<p>" + data.pressure + "</p></div>");
+        //     console.log(data);
+        // });
+        //
+        // $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+        //     APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
+        //     lat: 29.423017,
+        //     lon: -98.49
+        // }).done(function(data){
+        //     $(".day_three").append("<div class='col-sm'>" +
+        //         + "<h2>" + data.weather + "&degC" + "</h2>"
+        //         + "<p>" + data.clouds + "</p>"
+        //         + "<p>" + data.name + "</p>"
+        //         + "<p>" + data.wind + "</p>"
+        //         + "<p>" + data.pressure + "</p></div>");
+        //     console.log(data);
+        // })
+        //
+        // $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+        //     APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
+        //     lat: 29.423017,
+        //     lon: -98.49
+        // })
+        //
+
+
+
+    })();
+</script>
+
+</body>
+</html>
