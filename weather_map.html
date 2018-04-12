@@ -30,10 +30,17 @@
     <h1 class="text-center bg-secondary fluid m-0 p-0 align-content-center" style="height: 100px">Weather
         Application</h1>
 </div>
-<h2 class="m-3">San Antonio</h2>
+<div class="row">
+    <div class="col-md">
+        <h2 class="m-3">San Antonio</h2>
+    </div>
+    <div class="col-md">
+        <h2 class="m-3">New Location</h2>
+    </div>
+</div>
 <div class="container-fluid">
-    <div class="row align-content-center m-auto">
-        <section id="fw" class="col-12 m-auto "></section>
+    <div id="fw" class="row m-3">
+        <!--<section id="fw" class="col-12 m-auto "></section>-->
     </div>
     <div class="row bt-5">
         <form class="m-auto border rounded border-dark bg-dark col-6" style="height: 300px">
@@ -94,7 +101,7 @@
 
 
 
-        // THIS IS THE FUNCTION TO SHOW SAN ANTONIOS 3 DAYS FORECAST
+        // THIS IS THE FUNCTION TO SHOW SAN ANTONIO'S 3 DAYS FORECAST
 
         var request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
             APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
@@ -107,7 +114,7 @@
             console.log(response);
             response.list.forEach(function (data) {
                 console.log(data);
-                $("#fw").append("<div class='row m-auto p-5 float-left'><div class='col inline-flex border border-light bg-light m-0 ' style='height: 300px; width:400px'>" +
+                $("#fw").append("<div class='col-sm bg-light border border-dark'>" +
                     +"<h2>" + data.temp.max + "&degC" + "<strong>/</strong>"
                     + data.temp.min + "&degC" + "</h2>"
                     + "<p><img src='Weather_SunAbstract.png' height='50px' width='50px'></p>"
@@ -115,7 +122,7 @@
                     + "<p>" + data.weather[0].main + "</p>"
                     + "<p>" + data.weather[0].description + "</p>"
                     + "<p>" + data.humidity + "</p>"
-                    + "<p>" + data.pressure + "</p></div></div>")
+                    + "<p>" + data.pressure + "</p></div>")
             });
         });
         request.fail(onerror);
@@ -148,7 +155,7 @@
                // prevLocation= "";
                 response.list.forEach(function (data) {
                     console.log(data);
-                    $("#fw").append("<div class='container'><div class='col-12 inline-flex m-auto p-5 float-left'><div class='col-4 border border-light bg-light m-0 ' style='height: 300px; width:400px'>" +
+                    $("#fw").append("<div class='col-sm border border-dark bg-white p-2'>" +
                         +"<h2>" + data.temp.max + "&degC" + "<strong>/</strong>"
                         + data.temp.min + "&degC" + "</h2>"
                         + "<p><img src='Weather_SunAbstract.png' height='50px' width='50px'></p>"
@@ -156,7 +163,7 @@
                         + "<p>" + data.weather[0].main + "</p>"
                         + "<p>" + data.weather[0].description + "</p>"
                         + "<p>" + data.humidity + "</p>"
-                        + "<p>" + data.pressure + "</p></div></div></div>")
+                        + "<p>" + data.pressure + "</p></div>")
                 });
             });
             request.fail(onerror);
