@@ -27,7 +27,7 @@
 </head>
 <body>
 <div class="align-conten-center">
-    <h1 class="text-center bg-secondary fluid m-0 p-0 align-content-center" style="height: 100px">Weather
+    <h1 class="text-left bg-transparent fluid ml-4 p-0 align-content-center">Weather
         Application</h1>
 </div>
 <div class="row">
@@ -35,28 +35,30 @@
         <h2 class="m-3">San Antonio</h2>
     </div>
     <div class="col-md">
-        <h2 class="m-3">New Location</h2>
+        <!--<h2 class="m-3">New Location</h2>-->
     </div>
 </div>
 <div class="container-fluid">
     <div id="fw" class="row m-3">
         <!--<section id="fw" class="col-12 m-auto "></section>-->
     </div>
-    <div class="row bt-5">
-        <form class="m-auto border rounded border-dark bg-dark col-6" style="height: 300px">
-            <div class="form-group">
-                <label for="forLatitude" class="text-white mt-2" style="height: 50px">Add a latitude</label>
-                <input type="text" class="form-control" id="forLatitude" aria-describedby="emailHelp"
-                       placeholder="Enter latitude">
-            </div>
-            <div class="form-group">
-                <label for="forLongitude" class="text-white m-2" style="height: 50px">Add a longitude</label>
-                <input type="text" class="form-control" id="forLongitude" placeholder="Enter longitude">
-            </div>
-            <button id="new-forecast" type="submit" class="btn btn-secondary">Submit</button>
-        </form>
-    </div>
-    <div class="row">
+
+    <!--THIS IS THE SECTION FOR THE EXERCISE FOR SUBMITTING NEW LAT AND LON-->
+    <!--<div class="row bt-5">-->
+        <!--<form class="m-auto border rounded border-dark bg-dark col-6" style="height: 300px">-->
+            <!--<div class="form-group">-->
+                <!--<label for="forLatitude" class="text-white mt-2" style="height: 50px">Add a latitude</label>-->
+                <!--<input type="text" class="form-control" id="forLatitude"-->
+                       <!--placeholder="Enter latitude">-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<label for="forLongitude" class="text-white m-2" style="height: 50px">Add a longitude</label>-->
+                <!--<input type="text" class="form-control" id="forLongitude" placeholder="Enter longitude">-->
+            <!--</div>-->
+            <!--<button id="new-forecast" type="submit" class="btn btn-secondary">Submit</button>-->
+        <!--</form>-->
+    <!--</div>-->
+    <div class="row m-3">
         <div id="map-canvas" class="col-12"></div>
     </div>
 
@@ -113,16 +115,16 @@
        var prevLocation = request.done(function (response) {
             console.log(response);
             response.list.forEach(function (data) {
-                console.log(data);
-                $("#fw").append("<div class='col-sm bg-light border border-dark'>" +
-                    +"<h2>" + data.temp.max + "&degC" + "<strong>/</strong>"
-                    + data.temp.min + "&degC" + "</h2>"
-                    + "<p><img src='Weather_SunAbstract.png' height='50px' width='50px'></p>"
-                    // + "<p>"+ data.weather[0].icon + "</p>"
-                    + "<p>" + data.weather[0].main + "</p>"
-                    + "<p>" + data.weather[0].description + "</p>"
-                    + "<p>" + data.humidity + "</p>"
-                    + "<p>" + data.pressure + "</p></div>")
+            console.log(data);
+            $("#fw").append("<div class='col-sm bg-light border border-dark'>" +
+                +"<h2>" + data.temp.max + "&degC" + "<strong>/</strong>"
+                + data.temp.min + "&degC" + "</h2>"
+                + "<p><img src='Weather_SunAbstract.png' height='50px' width='50px'></p>"
+                // + "<p>"+ data.weather[0].icon + "</p>"
+                + "<p>" + data.weather[0].main + "</p>"
+                + "<p>" + data.weather[0].description + "</p>"
+                + "<p>" + data.humidity + "</p>"
+                + "<p>" + data.pressure + "</p></div>")
             });
         });
         request.fail(onerror);
@@ -151,7 +153,6 @@
                 units: "imperial"
             });
             request.done(function (response) {
-                console.log(response);
                // prevLocation= "";
                 response.list.forEach(function (data) {
                     console.log(data);
@@ -169,24 +170,10 @@
             request.fail(onerror);
 
         });
-        //         request.done(function(response) {
-        //             var thisInput = "";
-        //             var newInput +=thisInput +
-        //                 response.list.forEach(function(data) {
-        //                 $("#fw").append("<div class='row inline-flex float-left m-auto p-5'><div class='col-12 border rounded border-dark bg-secondary m-0' style='height: 400px; width:300px'>" +
-        //                     + "<h2>" + data.temp.max + "&degC" + "<strong>/</strong>"
-        //                     + data.temp.min + "&degC" + "</h2>"
-        //                     + "<p><img src='Weather_SunAbstract.png' height='150px' width='150px'></p>"
-        //                     // + "<p>"+ data.weather[0].icon + "</p>"
-        //                     + "<p>" + data.weather[0].main + "</p>"
-        //                     + "<p>" + data.weather[0].description + "</p>"
-        //                     + "<p>" + data.humidity + "</p>"
-        //                     + "<p>" + data.pressure + "</p></div></div>")
-        //             });
-        // });
-        // request.fail(onerror);
-        //
-        //     });
+        // THIS IS FOR UPDATING THE WEATHER BASED ON THE MARKER POSITION
+
+        // updaterweather function
+
 
         var mapOptions = {
             zoom: 19,
@@ -220,7 +207,6 @@
                     map: map,
                     draggable: true,
                     animation: google.maps.Animation.DROP
-                    // icon:
                     // position: {lat: 29.426791, lng:-98.489602}
 
                 });
