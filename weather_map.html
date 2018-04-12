@@ -121,8 +121,6 @@
         request.fail(onerror);
 
 
-
-//        THIS IS FOR THE INPUTS AND OUTPUTS
 // EVENT LISTENER:
 
 
@@ -150,7 +148,7 @@
                // prevLocation= "";
                 response.list.forEach(function (data) {
                     console.log(data);
-                    $("#fw").append("<div class='col-12 inline-flex m-auto p-5 float-left'><div class='col-4 border border-light bg-light m-0 ' style='height: 300px; width:400px'>" +
+                    $("#fw").append("<div class='container'><div class='col-12 inline-flex m-auto p-5 float-left'><div class='col-4 border border-light bg-light m-0 ' style='height: 300px; width:400px'>" +
                         +"<h2>" + data.temp.max + "&degC" + "<strong>/</strong>"
                         + data.temp.min + "&degC" + "</h2>"
                         + "<p><img src='Weather_SunAbstract.png' height='50px' width='50px'></p>"
@@ -158,7 +156,7 @@
                         + "<p>" + data.weather[0].main + "</p>"
                         + "<p>" + data.weather[0].description + "</p>"
                         + "<p>" + data.humidity + "</p>"
-                        + "<p>" + data.pressure + "</p></div>")
+                        + "<p>" + data.pressure + "</p></div></div></div>")
                 });
             });
             request.fail(onerror);
