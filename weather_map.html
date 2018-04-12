@@ -7,40 +7,61 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        body{
+        body {
             background-color: skyblue;
         }
-        .border{
+
+        .border {
             border: 1px solid black;
             height: 250px;
             background-color: white;
             text-align: center;
         }
+
+        #map-canvas {
+            width: 100%;
+            height: 600px;
+        }
+
     </style>
 </head>
 <body>
 <div class="align-conten-center">
-<h1 class="text-center bg-secondary fluid m-0 p-0 align-content-center" style="height: 100px">Weather Application</h1>
+    <h1 class="text-center bg-secondary fluid m-0 p-0 align-content-center" style="height: 100px">Weather
+        Application</h1>
 </div>
 <h2 class="m-3">San Antonio</h2>
 <div class="container-fluid">
-
-    <section id="fw" class="container-fluid align-content-center">
-
-
-    </section>
-
-
-
+    <div class="row align-content-center m-auto">
+        <section id="fw" class="col-12 m-auto "></section>
+    </div>
+    <div class="row bt-5">
+        <form class="m-auto border rounded border-dark bg-dark col-6" style="height: 300px">
+            <div class="form-group">
+                <label for="forLatitude" class="text-white mt-2" style="height: 50px">Add a latitude</label>
+                <input type="text" class="form-control" id="forLatitude" aria-describedby="emailHelp"
+                       placeholder="Enter latitude">
+            </div>
+            <div class="form-group">
+                <label for="forLongitude" class="text-white m-2" style="height: 50px">Add a longitude</label>
+                <input type="text" class="form-control" id="forLongitude" placeholder="Enter longitude">
+            </div>
+            <button id="new-forecast" type="submit" class="btn btn-secondary">Submit</button>
+        </form>
+    </div>
+    <div class="row">
+        <div id="map-canvas" class="col-12"></div>
+    </div>
 
 
 </div>
 
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL8LuyfD-k-yXPGU4QB4hnXdFL4XUF2Cs"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
-    (function() {
+    (function () {
         "use strict";
 
         // ================================ THESE ARE LUIS EXAMPLES FROM CLASS
@@ -71,44 +92,9 @@
         // });
 
 
-        // THIS IS THE TRY ==========================================
 
-        // clouds:
-        //     main:
-        //         wind:
-        //             humidity: 95
 
-        //
-        // var key = "8f32c0149a278cdb5f995fbb3d98eba5";
-        // // var city = "San Antonio";
-        // var url = "http://api.openweathermap.org/data/2.5/forecast/daily";
-
-    //     var request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily",{
-    //         APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
-    //         // q:  "San Antonio",
-    //         lat: 29.423017,
-    //         lon: -98.49
-    //
-    //
-    //     succees: function(data){
-    //         console.log("Received data:", data)
-    //         var wf= "";
-    //         wf +="<h2>" + data.city.name + "</h2>";
-    //         $.each(data.list, function(index, val){
-    //             (wf).append("<p>" + "<b>Day" + index
-    //                 + "</b>:" + data.main.temp + "&degC" + "<span> |"
-    //                 + val.weather[0].description + "</span>"
-    //                 + "<p>" + data.clouds + "</p>"
-    //                 + "<p>" + data.main.humidity + "</p>"
-    //                 + "<p>" + data.wind + "</p>"
-    //                 + "<p>" + data.main.pressure + "</p>")
-    //         });
-    //         $("#weather").html(wf);
-    //     }
-    //     request.fail(onerror);
-    // });
-
-        // SECOND TRY
+        // THIS IS THE FUNCTION TO SHOW SAN ANTONIOS 3 DAYS FORECAST
 
         var request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
             APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
@@ -117,14 +103,14 @@
             cnt: 3
         });
 
-        request.done(function(response) {
+       var prevLocation = request.done(function (response) {
             console.log(response);
-            response.list.forEach(function(data) {
-               console.log(data);
-                $("#fw").append("<div class='row inline-flex justify-content-center float-left m-3'><div class='col-12 border rounded border-dark bg-secondary m-0' style='height: 400px; width:300px'>" +
-                    + "<h2>" + data.temp.max + "&degC" + "<strong>/</strong>"
+            response.list.forEach(function (data) {
+                console.log(data);
+                $("#fw").append("<div class='row m-auto p-5 float-left'><div class='col inline-flex border border-light bg-light m-0 ' style='height: 300px; width:400px'>" +
+                    +"<h2>" + data.temp.max + "&degC" + "<strong>/</strong>"
                     + data.temp.min + "&degC" + "</h2>"
-                        + "<p><img src='Weather_SunAbstract.png' height='150px' width='150px'></p>"
+                    + "<p><img src='Weather_SunAbstract.png' height='50px' width='50px'></p>"
                     // + "<p>"+ data.weather[0].icon + "</p>"
                     + "<p>" + data.weather[0].main + "</p>"
                     + "<p>" + data.weather[0].description + "</p>"
@@ -136,57 +122,136 @@
 
 
 
-        // $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
-        //     APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
-        //     lat: 29.423017,
-        //     lon: -98.49
-        // }).done(function(data){
-        //     $(".day_one").append("<div class='col-sm'>" +
-        //         + "<h2>" + data.weather + "&degC" + "</h2>"
-        //         + "<p>" + data.clouds + "</p>"
-        //         + "<p>" + data.name + "</p>"
-        //         + "<p>" + data.wind + "</p>"
-        //         + "<p>" + data.pressure + "</p></div>");
-        //     console.log(data);
-        // });
-        //
-        //
-        // $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
-        //     APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
-        //     lat: 29.423017,
-        //     lon: -98.49
-        // }).done(function(data){
-        //     $(".day_two").append("<div class='col-sm'>" +
-        //         + "<h2>" + data.weather + "&degC" + "</h2>"
-        //         + "<p>" + data.clouds + "</p>"
-        //         + "<p>" + data.name + "</p>"
-        //         + "<p>" + data.wind + "</p>"
-        //         + "<p>" + data.pressure + "</p></div>");
-        //     console.log(data);
-        // });
-        //
-        // $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
-        //     APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
-        //     lat: 29.423017,
-        //     lon: -98.49
-        // }).done(function(data){
-        //     $(".day_three").append("<div class='col-sm'>" +
-        //         + "<h2>" + data.weather + "&degC" + "</h2>"
-        //         + "<p>" + data.clouds + "</p>"
-        //         + "<p>" + data.name + "</p>"
-        //         + "<p>" + data.wind + "</p>"
-        //         + "<p>" + data.pressure + "</p></div>");
-        //     console.log(data);
-        // })
-        //
-        // $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
-        //     APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
-        //     lat: 29.423017,
-        //     lon: -98.49
-        // })
-        //
+//        THIS IS FOR THE INPUTS AND OUTPUTS
+// EVENT LISTENER:
 
 
+        // define lat and lon in global scope
+        // assign lat and lon onClick
+        // console.log lat and lon and make sure we're getting the right value
+
+       // var inputEmpty = "";
+        var lat = $("#forLatitude");
+        var lon = $("#forLongitude");
+        $("#new-forecast").click(function (e) {
+            e.preventDefault();
+            alert(lat.val());
+            alert(lon.val());
+            console.log(lat.val(), lon.val());
+            var request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+                APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
+                lat:  lat.val(),
+                lon:  lon.val(),
+                cnt: 3,
+                units: "imperial"
+            });
+            request.done(function (response) {
+                console.log(response);
+               // prevLocation= "";
+                response.list.forEach(function (data) {
+                    console.log(data);
+                    $("#fw").append("<div class='col-12 inline-flex m-auto p-5 float-left'><div class='col-4 border border-light bg-light m-0 ' style='height: 300px; width:400px'>" +
+                        +"<h2>" + data.temp.max + "&degC" + "<strong>/</strong>"
+                        + data.temp.min + "&degC" + "</h2>"
+                        + "<p><img src='Weather_SunAbstract.png' height='50px' width='50px'></p>"
+                        // + "<p>"+ data.weather[0].icon + "</p>"
+                        + "<p>" + data.weather[0].main + "</p>"
+                        + "<p>" + data.weather[0].description + "</p>"
+                        + "<p>" + data.humidity + "</p>"
+                        + "<p>" + data.pressure + "</p></div>")
+                });
+            });
+            request.fail(onerror);
+
+        });
+        //         request.done(function(response) {
+        //             var thisInput = "";
+        //             var newInput +=thisInput +
+        //                 response.list.forEach(function(data) {
+        //                 $("#fw").append("<div class='row inline-flex float-left m-auto p-5'><div class='col-12 border rounded border-dark bg-secondary m-0' style='height: 400px; width:300px'>" +
+        //                     + "<h2>" + data.temp.max + "&degC" + "<strong>/</strong>"
+        //                     + data.temp.min + "&degC" + "</h2>"
+        //                     + "<p><img src='Weather_SunAbstract.png' height='150px' width='150px'></p>"
+        //                     // + "<p>"+ data.weather[0].icon + "</p>"
+        //                     + "<p>" + data.weather[0].main + "</p>"
+        //                     + "<p>" + data.weather[0].description + "</p>"
+        //                     + "<p>" + data.humidity + "</p>"
+        //                     + "<p>" + data.pressure + "</p></div></div>")
+        //             });
+        // });
+        // request.fail(onerror);
+        //
+        //     });
+
+        var mapOptions = {
+            zoom: 19,
+            center: {
+                lat: 29.426791,
+                lng: -98.489602
+            },
+            MapTypeId: google.maps.MapTypeId.HYBRID
+        };
+
+        var mapCanvas = document.getElementById("map-canvas");
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+
+
+        var geocoder = new google.maps.Geocoder();
+
+        var address = {
+            address: "849 E Commerce, San Antonio, TX 78205",
+        };
+
+        function callback(results, status, restaurants) {
+            if (status === google.maps.GeocoderStatus.OK) {
+                console.log(results);
+                // Recenter the map over the address
+                map.setCenter(results[0].geometry.location);
+                // map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+                map.setZoom(5);
+
+                var marker = new google.maps.Marker({
+                    position: results[0].geometry.location,
+                    map: map,
+                    draggable: true,
+                    animation: google.maps.Animation.DROP
+                    // icon:
+                    // position: {lat: 29.426791, lng:-98.489602}
+
+                });
+
+                var info = new google.maps.InfoWindow({
+                    content: "<div id=window><img src='FogoBanner_SanAntonio_01.jpg'>" +
+                    "<div>" +
+                    "<h1>Fogo de Chao</h1>" +
+                    "<p style='text-align:justify'>Fogo de Chao is a Brazilian restaurant with the best" +
+                    " meat cuts<br>It also has a salad bar that includes charcuterie and cheeses.</p>" +
+                    "</div>"
+                });
+
+                marker.addListener('click', function () {
+                    info.open(map, marker);
+                });
+                marker.addListener('click', toggleBounce);
+
+                function toggleBounce() {
+                    if (marker.getAnimation() !== null) {
+                        marker.setAnimation(null);
+                    } else {
+                        marker.setAnimation(google.maps.Animation.BOUNCE);
+                    }
+                    // toggleBounce();
+                }
+
+            } else {
+
+                // Show an error message with the status if our request fails
+                alert("Geocoding was not successful - STATUS: " + status);
+            }
+
+        }
+
+        geocoder.geocode(address, callback);
 
     })();
 </script>
