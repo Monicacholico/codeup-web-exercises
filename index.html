@@ -2,9 +2,113 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Simon Says</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <style>
+       .fadein {
+            border-radius: 25%;
+            opacity: .5;
+        }
+    </style>
 </head>
 <body>
-$END$
+<div class="container-fluid">
+    <div class="row m-5" style="height: 800px;">
+        <div id="a" class=" fadein col-6 bg-warning" style="height: 400px"></div>
+        <div id="b" class=" fadein col-6 bg-danger" style="height: 400px"></div>
+        <div id="c" class=" fadein col-6 bg-success" style="height: 400px"></div>
+        <div id="d" class=" fadein col-6 bg-primary" style="height: 400px"></div>
+    </div>
+
+</div>
+<div class="container-fluid">
+    <div class="row m-5" style="height: 800px;">
+        <button id="1" class="col-6 bg-warning" style="height: 400px"></button>
+        <button id="2" class="col-6 bg-danger" style="height: 400px"></button>
+        <button id="3" class="col-6 bg-success" style="height: 400px"></button>
+        <button id="4" class="col-6 bg-primary" style="height: 400px"></button>
+    </div>
+    <div class="row">
+        <div class="col-8 m-auto">
+            <button id="start" class="bg-dark border circle-rounded m-auto" style="height: 80px">START</button>
+        </div>
+    </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+(function() {
+        "use strict";
+
+   // EVENT LISTENER FOR DIVS
+
+   var yellow = $('#a').click(function() {
+        $(this).animate({opacity: 1},200).animate({opacity:.5}, 100);
+    });
+    var red = $('#b').click(function() {
+        $(this).animate({opacity: 1},200).animate({opacity:.5}, 100);
+    });
+    var green = $('#c').click(function() {
+        $(this).animate({opacity: 1},200).animate({opacity:.5}, 100);
+    });
+    var blue = $('#d').click(function() {
+        $(this).animate({opacity: 1},200).animate({opacity:.5}, 100);
+    });
+
+
+    
+
+
+
+        // $("#1").click(function(){
+        //     $("#2").css({backgroundColor: #000})
+        // })
+
+
+        var game ={
+            sequence: [],
+            clicked: 0
+        };
+
+
+function ids(){
+    var blank= "";
+    var pSeq = "1234";
+    for (var i = 0; i < 1; i++){
+        blank +=
+            pSeq.chartAt(Math.floor(Math.random() * possible.length));
+        settings.sequence.push(blank);
+    }
+}
+
+
+
+    function eventClicking () {
+        $("#1, #2, #3, #4").mousedown(function () {
+
+            if (this.id == game.sequence[settings.clicked]) {
+
+                if (game.clicked === game.sequence.length - 1) {
+                    $("#1", "#2", "#3", "#4").off("mousedown");
+                    game.clicked = 0;
+                    $("#start").trigger()
+                }
+            }
+        });
+
+    }
+
+    $("#1","#2", "#3", "#4").click(function(){
+        animate(this.id)
+    });
+    $("#start").click(function(){
+    $("#start").hide();
+
+    });
+
+
+
+})();
+</script>
 </body>
 </html>
