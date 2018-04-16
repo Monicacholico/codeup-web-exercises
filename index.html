@@ -5,106 +5,142 @@
     <title>Simon Says</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <style>
-       .fadein {
+        .fadein {
             border-radius: 25%;
             opacity: .5;
+        }
+        #green {
+            border-radius: 0 0 0 180%;
+        }
+
+        #red {
+            border-radius: 0 180% 0 0;
+        }
+
+        #yellow {
+            border-radius: 180% 0 0 0;
+        }
+
+        #blue {
+            border-radius: 0 0 180% 0;
         }
     </style>
 </head>
 <body>
-<div class="container-fluid">
-    <div class="row m-5" style="height: 800px;">
-        <div id="a" class=" fadein col-6 bg-warning" style="height: 400px"></div>
-        <div id="b" class=" fadein col-6 bg-danger" style="height: 400px"></div>
-        <div id="c" class=" fadein col-6 bg-success" style="height: 400px"></div>
-        <div id="d" class=" fadein col-6 bg-primary" style="height: 400px"></div>
+<div class="container m-auto">
+    <div class="row m-auto" style="height: 250px">
+        <div id="yellow" class="col-4 fadein bg-warning ml-5" style="height: 250px"></div>
+        <div id="red" class="col-4 fadein bg-danger m-0" style="height: 250px"></div>
     </div>
-
-</div>
-<div class="container-fluid">
-    <div class="row m-5" style="height: 800px;">
-        <button id="1" class="col-6 bg-warning" style="height: 400px"></button>
-        <button id="2" class="col-6 bg-danger" style="height: 400px"></button>
-        <button id="3" class="col-6 bg-success" style="height: 400px"></button>
-        <button id="4" class="col-6 bg-primary" style="height: 400px"></button>
+    <div class="row m-auto" style="height: 250px">
+        <div id="green" class="col-4 fadein bg-success ml-5 " style="height: 250px"></div>
+        <div id="blue" class="col-4 fadein bg-primary m-0 " style="height: 250px"></div>
     </div>
     <div class="row">
-        <div class="col-8 m-auto">
-            <button id="start" class="bg-dark border circle-rounded m-auto" style="height: 80px">START</button>
+        <div class="m-auto">
+            <button id="start" class="col-md text-white bg-dark border rounded-circle m-auto" style="height: 75px" >START</button>
         </div>
-    </div>
+        <button class="m-auto bg-warning border rounded-circle" id="show-rounds" style="height: 75px">ROUNDS
+        </button>
 
-</div>
+    </div>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
 (function() {
         "use strict";
 
-   // EVENT LISTENER FOR DIVS
 
-   var yellow = $('#a').click(function() {
-        $(this).animate({opacity: 1},200).animate({opacity:.5}, 100);
-    });
-    var red = $('#b').click(function() {
-        $(this).animate({opacity: 1},200).animate({opacity:.5}, 100);
-    });
-    var green = $('#c').click(function() {
-        $(this).animate({opacity: 1},200).animate({opacity:.5}, 100);
-    });
-    var blue = $('#d').click(function() {
-        $(this).animate({opacity: 1},200).animate({opacity:.5}, 100);
-    });
+ /*
+ 1. GAME WITH 4 COLORS THAT START WITH A CLICK
+ 2. WITH THE CLICK RANDOMLY ONE OF THE COLORS SHOULD LIGHT AND THEN START A SEQUENCE
+ */
+    // FOR GAME SETTINGS WE'LL NEED:
+
+    var sequence = [];
+    var userSequence = [];
+    var rounds = 0;
+    var passLevel = false;
+
+ //   TO RANDOMIZE THE COLORS
+
+    var forColors = function(arr) {
+        var colorsArray = ["green", "red", "yellow", "blue"];
+        return arr.push(colorsArray[Math.floor(Math.random() * colorsArray.length)]);
+    };
+
+// TO ADD EFECT
+
+    var lightColors = function(arr) {
+        var i = 0;
+
+        var interval = setInterval(function() {
+            $("#" + arr[i]).animate({opacity: 1}, 200).animate({opacity:.5}, 100);
+            i++;
+            if (i >= arr.length) {
+                clearInterval(interval);
+            }
+        }, 1500);
+    };
+
+    // 3. THE USER MUST REPEAT THIS SEQUENCE OF LIGHTS
 
 
-    
-
-
-
-        // $("#1").click(function(){
-        //     $("#2").css({backgroundColor: #000})
-        // })
-
-
-        var game ={
-            sequence: [],
-            clicked: 0
-        };
-
-
-function ids(){
-    var blank= "";
-    var pSeq = "1234";
-    for (var i = 0; i < 1; i++){
-        blank +=
-            pSeq.chartAt(Math.floor(Math.random() * possible.length));
-        settings.sequence.push(blank);
+    function resetUserSequence () {
+        userSequence = [];
     }
-}
+
+    function updateRounds () {
+        rounds++;
+        $("#show-rounds").html(rounds);
+    };
+
+    function resetGame () {
+        rounds = 0;
+        $("#show-rounds").html(rounds);
+        sequence = [];
+        resetUserSequence();
+    }
+
+    //  4. WHEN THE USER REPEAT CORRECTLY THE SEQUENCE THE COMPUTER RETURNS
+
+    var userTurn = function() {
+        updateRounds();
+        forColors(sequence);
+        lightColors(sequence);
 
 
+        $(".fadein").off("click").on("click", function() {
+            userSequence.push($(this).attr("id"));
 
-    function eventClicking () {
-        $("#1, #2, #3, #4").mousedown(function () {
+            for (var i = 0; i < userSequence.length; i++) {
+                //game continues
+                if (JSON.stringify(sequence) === JSON.stringify(userSequence)) {
+                    resetUserSequence();
+                    userTurn();
+                    break;
+                }
 
-            if (this.id == game.sequence[settings.clicked]) {
-
-                if (game.clicked === game.sequence.length - 1) {
-                    $("#1", "#2", "#3", "#4").off("mousedown");
-                    game.clicked = 0;
-                    $("#start").trigger()
+                //game over
+                if (userSequence[i] !== sequence[i]) {
+                    if (passLevel === false) {
+                        alert("Game Over!");
+                        resetGame();
+                        break;
+                    }
                 }
             }
         });
+    };
 
-    }
-
-    $("#1","#2", "#3", "#4").click(function(){
-        animate(this.id)
+    $("#start").click(function() {
+        userTurn();
     });
-    $("#start").click(function(){
-    $("#start").hide();
 
-    });
+ /*
+  A NEW SEQUENCE THAT WILL INCREMENT THE RANDOM NUMBER OF LIGHTS TURNING ON
+  5.WHEN THE USER FAILS TO REPEAT THE SEQUENCE GIVEN BY THE COMPUTER THE GAME STOPS
+  6. THERE MUST BE A COUNT OF THE ROUNDS FOR THE USER WHEN WINS SEVERAL SEQUENCES
+  */
 
 
 
