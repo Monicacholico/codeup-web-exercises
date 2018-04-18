@@ -56,7 +56,7 @@ $("h3").click(function(){
     //
     // };
 
-
+    // =============== THIS IS THE BONUS EXERCISE TO SWAP IMAGES =========================
 
     $("#swap-button1").click(function(){
         $("img").each(function(i){
