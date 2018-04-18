@@ -69,7 +69,13 @@ body{
         var request = $.ajax("data/blog.json");
         request.done(function(response){
             response.forEach(function(post){
-                $("#posts").append("<div class='row'><div class='media bg-dark border border-light text-light'><img class='mr-3' src='blogpost-placeholder-100x100.png' height='200' width='200'><div class='media-body text-justify m-3'><h5 class='mt-0'>" + post.title + "</h5>" + post.content + "</div></div><div class='row'><div class='col-12 m-4 text-left'>" + post.categories +  "</div></div><div class='row'><div class='col-12 m-4 text-left'>" + post.date + "</div></div></div>");
+                $("#posts").append("<div class='row'>" +
+                    "<div class='media bg-dark border border-light text-light'>" +
+                    "<img class='mr-3' src='blogpost-placeholder-100x100.png' height='200' width='200'>" +
+                    "<div class='media-body text-justify m-3'><h5 class='mt-0'>" + post.title + "</h5>"
+                    + post.content + "</div></div><div class='row'><div class='col-12 m-4 text-left'>"
+                    + post.categories +  "</div></div><div class='row'><div class='col-12 m-4 text-left'>"
+                    + post.date + "</div></div></div>");
             });
         });
         request.fail(onerror);
@@ -78,15 +84,15 @@ body{
 
 
 
-        // var previous = null;
-        // var current = null;
-        //
-        //
-        //     $.getJSON("data/blog.jason", function(){
-        //         current = JSON.stringify(json);
-        //         if(previous && current && previous !== current){
-        //         }
-        //     }); location.reload();
+        var previous = null;
+        var current = null;
+
+
+            $.getJSON("data/blog.jason", function(){
+                current = JSON.stringify(json);
+                if(previous && current && previous !== current){
+                }location.reload();
+            });
 
 
 
