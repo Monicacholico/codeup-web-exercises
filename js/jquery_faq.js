@@ -8,15 +8,15 @@
     });
 
 
-// $('.text').hide();
-// $('.expander').click(function(){
-//     $('.text').slideToggle(500);
-// });
+    $('.text').hide();
+    $('.expander').click(function(){
+        $('.text').slideToggle(500);
+    });
 
 
-// $('.expander').click(function(){
-//     $(this).parent().next().slideToggle(200);
-// };
+    $('.expander').click(function(){
+        $(this).parent().next().slideToggle(200);
+    };
 
 
     $("#list-button").click(function () {
