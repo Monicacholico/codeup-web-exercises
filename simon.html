@@ -2,9 +2,368 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <style>
+        .fadein {
+            border-radius: 25%;
+            opacity: .5;
+        }
+        #green{
+            border-radius: 0 0 0 180%;
+        }
+        #blue{
+            border-radius: 0 0 180% 0;
+        }
+        #red{
+            border-radius: 0 180% 0 0;
+        }
+        #yellow{
+            border-radius: 180% 0 0 0;
+        }
+    </style>
 </head>
 <body>
-$END$
+<div class="container-fluid">
+    <div class="row m-5" style="height: 500px">
+        <!--<div class="col-6">-->
+        <div id="yellow" class="col-5 fadein bg-warning" style="height: 250px"></div>
+        <div id="red" class="col-5 fadein bg-danger" style="height: 250px"></div>
+        <div id="green" class="col-5 fadein bg-success" style="height: 250px"></div>
+        <div id="blue" class="col-5 fadein bg-primary" style="height: 250px"></div>
+        <!--</div>-->
+    </div>
+<div class="row">
+    <div class="col-8 m-auto">
+        <button id="start" class="bg-dark border circle-rounded m-auto" style="height: 80px">START</button>
+    </div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    (function() {
+        "use strict";
+
+//         var sequence = [];
+//         var userSequence = [];
+//         var level = 0;
+//         var passLevel = false;
+//
+//
+// var computerMovements = [];
+// var answers = [];
+// var rounds = 0;
+// var strict = true;
+// var lastChance - false;
+//
+// var addColor = function(arr){
+//     var colorsArray = ["green", "red", "yellow", "blue"];
+//     return arr.push(colorsArray[Math.floor(Math.random()* colorsArray.length)]);
+//         };
+//
+// var flashLights = function(arr){
+//     var i = 0;
+//
+//     var interval = setInterval(function(){
+//         $("#" + arr[i]).fadeTo("slow", 0).fadeTo("slow", 1);
+//         $("#sound-" + arr[i])[0].play();
+//         i++;
+//         if (i >= arr.length) {
+//             clearInterval(interval);
+//         }
+//
+//     }, 1500);
+// };
+// var resetAnswers = function({
+//     rounds ++;
+//     $("#show-rounds").html(rounds);
+//     });
+//
+// var updateRounds = function(){
+//     rounds ++;
+//     $("#show-rounds").html(rounds);
+//         };
+// var resetGame = function(){
+//     rounds = 0;
+//     computerMovements = [];
+//     if(strict === false){
+//         lastChance = true;
+//     }
+//     resetAnswers();
+// };
+//
+// var PlayerTurn = function(){
+//     $("#mode").click(function () {
+//         return false;
+//     });
+//     //winning condition
+//     if(rounds === 20) {
+//         alert("You're good");
+//         resetGame();
+//     }
+//     updateRounds();
+//     addColor(computerMovements);
+//     flashLights(computerMovements);
+//
+//     $("button").off("click").on("click", function(){
+//         $("#sound-" + $(this).attr("id"))[0].play();
+//         answers.push($(this).attr("id"));
+//
+//         for (var i = 0; i < answers.length; i++){
+//         //    correct answer
+//             if(JSON.stringify(computerMovements)==== JSON.stringify(answers)){
+//                 resetAnswers();
+//                 playerTurn();
+//                 break;
+//             }
+//         //    wrong answer
+//             if(answers[i] !== computerMovements[i]) {
+//                 if (strict === false && lastChance = true) {
+//                     lastChance = false;
+//                     alert("You get one more chance");
+//                     resetAnswers();
+//                     flashLights(computerMovements);
+//                 } else if (
+//                     answers[i] !== computerMovements[i] && lastChance === false) {
+//                     alert("Epick fail!");
+//                     resetGame();
+//                     break;
+//                 }
+//             }
+//         }
+//     });
+// };
+//
+// $("#mode").click(function({
+//     switch (strict){
+//         case true:
+//             strict = false;
+//             lastChance = true;
+//             $("#mode").html("Mode: Relaxed");
+//             break;
+//
+//             case false;
+//             strict = true;
+//             lastChance - false;
+//             $("#mode").html("Mode: Strict");
+//             break;
+//         }
+//   });
+// $("#start").click(function(){
+//     playerTurn();
+//     $("#start").hide();
+// });
+
+
+    //================================================================
+
+
+        // var game = {
+        //     count: 0,
+        //     possibilities: ['#green','#blue', '#red', '#dark'],
+        //     currentGame: [],
+        //     player: [],
+        //     sound:{
+        //         blue: new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3'),
+        //         red: new Audio('https://s3.amazonaws.com/freecodecamp/simonSound2.mp3'),
+        //         dark: new Audio('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3'),
+        //         green: new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3')
+        //     },
+        //     strict: false,
+        // }
+        //
+        // function newGame() {
+        //     clearGame();
+        // }
+        //
+        // function clearGame() {
+        //     game.currentGame = [];
+        //     game.count = 0;
+        //     addCount();
+        // }
+        //
+        // function addCount() {
+        //     game.count++;
+        //     $('#clickNumber').addClass('animated fadeOutDown');
+        //
+        //     setTimeout(function(){
+        //         $('#clickNumber').removeClass('fadeOutDown').html(game.count).addClass('fadeInDown');
+        //     }, 200);
+        //
+        //     generateMove();
+        // }
+        //
+        // function generateMove(){
+        //     game.currentGame.push(game.possibilities[(Math.floor(Math.random()*4))]);
+        //     showMoves();
+        // }
+        //
+        // function showMoves() {
+        //     var i = 0;
+        //     var moves = setInterval(function(){
+        //         playGame(game.currentGame[i]);
+        //         i++;
+        //         if (i >= game.currentGame.length) {
+        //             clearInterval(moves);
+        //         }
+        //     }, 600);
+        //
+        //     clearPlayer();
+        // }
+        //
+        // function playGame(field) {
+        //     $(field).addClass('hover');
+        //     sound(field);
+        //     setTimeout(function(){
+        //         $(field).removeClass('hover');
+        //     }, 300);
+        // }
+        //
+        // function clearPlayer() {
+        //     game.player = [];
+        // }
+        //
+        // function addToPlayer(id) {
+        //     var field = "#"+id
+        //     console.log(field);
+        //     game.player.push(field);
+        //     playerTurn(field);
+        // }
+        //
+        // function playerTurn(x) {
+        //     if (game.player[game.player.length - 1] !== game.currentGame[game.player.length - 1]) {
+        //         if(game.strict){
+        //             alert('Try again! ...From scratch!');
+        //             newGame();
+        //         } else {
+        //             alert('Wrong move! Try again!');
+        //             showMoves();
+        //         }
+        //     } else {
+        //         console.log('Good Move!');
+        //         sound(x);
+        //         var check = game.player.length === game.currentGame.length;
+        //         if (check) {
+        //             if(game.count == 20){
+        //                 alert('You won! Congrats.');
+        //             } else {
+        //                 alert('Next round!');
+        //                 nextLevel();
+        //             }
+        //         }
+        //     }
+        // }
+
+
+
+
+function simonMove(){
+    var boxes = $(".box");
+    var randomIndex = Math.floor(Math.random() * 3);
+    var move = boxes[randomIndex];
+    simonSequence.push(move);
+    playBack()
+}
+
+function playBack(){
+//    calls a function every given amount of time...
+    var i = 0;
+    setInterval(function () {
+        if (i >= simonSequence.length){
+            clearInterval(intervalId)
+        }
+        lightUp(simonSequence[i])
+        i++
+    }, 400);
+}
+
+
+        function lightUp(box) {
+            $(box).css("opacity", 0.2);
+            setTimeout(function () {
+                $(box).css("opacity", 1.0);
+            }, 100);
+        }
+
+    $(".box").click(function(event){
+      lightUp(event.target);
+    });
+
+var color= $(event.target).data("color");
+if (simonSequence[counter] == color && counter === simonSequence.length){
+    counter = 0;
+    simonMove();
+    else if(simonSequence[counter] === color){
+        else{
+            counter = 0;
+            simonSequence = [];
+            playerSequence = [];
+        }
+    }
+}
+
+    //compare what we clicked to what we should click
+    //you clicked the right box and you're done
+    //you choose right, but there's more to go ...
+    //incorrect
+
+
+    //starts the game
+        $("button").click(function(){
+
+        })
+
+
+    //model the problem/domain/process
+    //    click star, simon moves
+    //    Simon Move means the computer selects a box at random then lights that box up
+    //    simon adds that move to its sequence of moves
+    //    simon waits for player to make a choice
+    //    if player chooses correctly simon moves again
+
+    //    if a player clicks a box, light up that box.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })();
+</script>
 </body>
 </html>
