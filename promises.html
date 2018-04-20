@@ -2,9 +2,123 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Promises</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+        #red {
+            background-color: red;
+        }
+        #blue {
+            background-color: blue;
+        }
+        #orange {
+            background-color: orange;
+        }
+        #hotpink {
+            background-color: hotpink;
+        }
+    </style>
 </head>
 <body>
-$END$
+
+
+
+<div class="box" id="red"></div>
+<div class="box" id="blue"></div>
+<div class="box" id="orange"></div>
+<div class="box" id="hotpink"></div>
+
+
+
+<!--<script>-->
+
+    <!--//asynchronous operations-->
+    <!--setTimeout(()=>{-->
+        <!--document.getElementById('red').style.display ='none'-->
+    <!--}, 2000);-->
+
+    <!--setTimeout(()=>{-->
+        <!--document.getElementById('blue').style.display ='none'-->
+    <!--}, 2000);-->
+
+    <!--setTimeout(()=>{-->
+        <!--document.getElementById('orange').style.display ='none'-->
+    <!--}, 2000);-->
+
+    <!--setTimeout(()=>{-->
+        <!--document.getElementById('gold').style.display ='none'-->
+    <!--}, 2000);-->
+
+
+
+    <!--function ajax(){-->
+
+    <!--const promise = new Promise(function(resolve/*done*/, reject /*fail*/){-->
+       <!--setTimeout(() => { //supose that this is an ajax request-->
+            <!--if (Math.random() > 0.5){-->
+                <!--resolve();-->
+                <!--} else{-->
+                    <!--reject();-->
+                <!--}-->
+            <!--}, 1500);-->
+        <!--});-->
+        <!--return promise;-->
+    <!--}-->
+
+
+    <!--const promise = ajax();-->
+    <!--promise.then(()=> console.log('resolved'));-->
+    <!--promise.catch(()=> console.log('reject'));-->
+
+
+
+    <!--function getGithubUsers(){-->
+        <!--.then(users => {-->
+            <!--//console.log(users);-->
+            <!--const listItems = users-->
+                <!--.filter(user => user.login.includes("la"))-->
+        <!--})-->
+    <!--}-->
+
+    <!--const promiseRequest = fetch('https://api.github.com/users');-->
+    <!--promiseRequest-->
+
+
+    <!--.then((response)=> console.log(response))-->
+    <!--.then(users => {-->
+       <!--const listItems = users-->
+            <!--.filter(user => user.name.includes("exception"))-->
+            <!--.map(use => `<li>${user.name}</li>`)-->
+            <!--.join("");-->
+       <!--console.log(listItems);-->
+        <!--document.write(`<ul>${listItems}</ul>`)-->
+    <!--})-->
+    <!--;-->
+
+    <!--promiseRequest.catch((error)=> console.log(error));-->
+
+    <!--let header = new Headers({-->
+
+        <!--"Access-Control-Allow-Origin":-->
+    <!--});-->
+
+
+    <!--const githubPromise= fetch( "https://api.github.com/repositories");-->
+    <!--const bitbucketPromise = fetch("https://api.bitbucket.org/2.0/repositories", {header})-->
+    <!--Promise.all([githubPromise, promiseRequest])-->
+        <!--.then(response => {-->
+            <!--responses.forEach(response => console.log(response));-->
+        <!--});-->
+
+    <!--catch(error => console.log(error));-->
+
+
+
+<!--</script>-->
+<script src="js/promises.js"></script>
+<!--b45e48aae22bc32f25ebf4f03dd740ce566f3653-->
 </body>
 </html>
