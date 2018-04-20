@@ -2,9 +2,225 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Javascript II</title>
 </head>
 <body>
-$END$
+
+
+<button id="filter-by-language" type="button">Show users with more than 2 languages</button>
+
+
+
+
+<script>
+    // global variables
+    // local variables -> defined inside of a function
+    // parameters -> inside of a function
+    // block level -> anywhere, either inside of a function or in the global scope
+
+    function uppercasName (name){
+    var modifiedName = name.toUpperCase();
+    return modifiedName;
+    }
+
+    function multiplyIfPositive(number){
+    if(number > 0){
+        let multiplied = number * 10;
+        return multiplied;
+    }
+    //console.log(multiplied); //error
+    return number;
+    }
+
+
+
+
+
+
+
+    if (true){
+        const cohortName = "Ulyses"; // block level scope
+        let number = 7; // block level scope
+        console.log(numer);
+        console.log(cohortName);
+
+
+
+
+
+
+    var tbody = $("#friends");
+    var sortName = $(".sort");
+    var friends =[
+        {name: "Oliver", books: ["Ansible for DevOps", "Servers for hackers"]},
+        {
+            name:"barry",
+            books: ["Working effectively with unite tests", "50 quick ideas for your tests"]
+        },
+        {
+            name: "Jessica",
+            books: ["Understanding the 4 rules fo simple desing", "Principles of package design"]
+        },
+        {name: "Clark", book:["Selling test driven projects"]}
+    ];
+   var buildTableRows = function (friends){
+
+   };
+
+
+
+
+
+    var sortTable = function(event){
+        event.preventDefault();
+sortFriendsByName(friends);
+tbody.html(buildTableRows(friends));
+    };
+
+    // ======================= FUNCTION MAP =========================
+
+
+
+    const names = [];
+
+
+    const names = users.map(user => names.push(user.name));
+
+    // THE SAME THAT ABOVE
+
+    // for (let user of users){
+    // names.push(user.name); // map operation -> extract all the names from users
+    // }
+    // console.log (names);// output an array with names
+
+
+
+    const capitalizeNames = names.map(name => name[0].toUpperCase() + name.substring(1));
+
+    // FOR DOING BOTH IN SAME LINES
+
+const capitalizeNames = users
+
+    .map(user => user.name)
+    .map(name => name[0].toUpperCase() + name.substring(1))
+    .map(capitalizeNames => `<li>${capitalizeNames}</li>`);// return `<li>
+
+
+document.write(`<ul>${listItems}</ul>`);
+
+    // THE SAME THAN ABOVE
+
+    // const capitalizeNames = [];
+    // for (let name of names){
+    // capitalizeNames.push(name[0].toUpperCase() + name.substring(1));
+    // }
+    // console.log(capitalizaeNames);
+    //
+
+
+
+
+    // ===================== FUNCTION FILTERING =================================
+
+
+    document.getElementById("filter-by-language").addEventListener(()=>{
+    console.log("filter");
+    });
+
+
+    const languages = users.map(user => user.languages);
+    console.log(languages); //map
+
+
+        const moreThan2Languages = users
+            .map(user => user.languages)
+            .filter(language => language.length > 2)// knows more than 2 languages
+            .filter(language => language.includes("java"));
+        console.log (moreThan2Languages);
+
+
+        // THESE TWO BELOW ARE THE SAME THAN THE ONE ABOVE
+
+    const moreThan2languages = [];
+    for(const language of languages){
+    if (languages.length > 2){
+       moreThan2Languages.push(language);
+        }
+    }
+    console.log(moreThan2languages);
+
+    //only the ones that know javascript
+    const knowsJS =[];
+    for (const language of languages){
+    if (langua.includes("javascript")){
+    knowsJS.push(language);
+        }
+    }
+    console.log(knowsJS);
+
+const listItems = users
+    .filter(user => user.languges.length > 2) //knows more than 2 languages
+    .map(user => user.name)
+    .map(name => name[0].toUpperCase() + name.substring(1))
+    .map(capitalizeNames => `<li>${capitalizeNames}</li>`);// return `<li>
+
+document.write(`<ul>${listItems.join("")}</ul>`);
+
+
+
+// ======================================== REDUCE FUNCTION =========================
+
+
+    document.write(`<ul${listItems.join("")}</ul>`);
+
+    document.getElementById("filter-by-language").addEventListener('click', () => { ...});
+    
+    document.getElementById("count-different-languages").addEventListener("click", () =>{
+    console.log("different languages");
+    const allLanguages = users
+        .map(user => user.languages)
+        .map(languages =>);
+
+
+
+    const counter = [];
+    for (const languages of allLanguages){
+    for (const language of languages){
+
+        if(!counter.includes(language)){
+        counter.push(language)
+        }
+    }
+    }
+    console.log(counter.length);
+    });
+
+    // =============================== SAME AS ABOVE THIS ONE BELOW
+
+    const counter =[];
+    const allLanguages = users
+        .map(user => user.languages)
+        .reduce((allLanguages, userLanguages) => {
+        return allLanguages.concat(userLanguages)
+    }, [])
+
+// .filter(language => !counter.includes(language)); THIS ONE DIDNT WORK
+    .filter(language => {
+    const isDuplicated = counter.includes(language);
+    if(!isDuplicated){
+    counter.push(language);
+        }
+        return !isDuplicated;
+    });
+
+    const differentLanguages = allLanguages.length;
+    document.write(`we all know<strong>${differentLanguages}</strong>languages.`);
+
+    // console.log(counter);
+    // console.log(allLanguages);
+
+
+
+</script>
 </body>
 </html>
