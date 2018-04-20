@@ -30,3 +30,48 @@ const users = [
         languages: ['html', 'css', 'javascript', 'php'],
     },
 ];
+
+
+
+const listLanguages = users
+.filter(user => user.languages.length > 2)
+    .map(user => user.name)
+    .map(name => name);
+console.log(listLanguages);
+
+
+
+const listItems = users
+    .map(user => user.email)
+    .map(email => email);
+console.log(listItems);
+
+
+
+const theIds = users.reduce((partialResult, currentValue) =>{
+    // return id + currentValue
+    partialResult[currentValue.id] = currentValue;
+    // console.log(partialResult);
+    // console.log(currentValue);
+    return partialResult;
+    // console.log( id + currentValue);
+},{});
+console.log(theIds);
+/*
+result = {
+    "1": {
+        id: 1,
+        name: 'ryan',
+        email: 'ryan@codeup.com',
+        languages: ['clojure', 'javascript'],
+    },
+    "2": {
+        id: 1,
+        name: 'ryan',
+        email: 'ryan@codeup.com',
+        languages: ['clojure', 'javascript'],
+    }
+}*/
+
+
+//function
