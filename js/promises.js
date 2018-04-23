@@ -25,5 +25,26 @@ function getLastCommit(username) {
 getLastCommit('Monicacholico');
 
 
+// ==================== PROMISES EXERCISES RESOLVED BY LUIS ======================================
 
-
+// const wait = miliseconds => {
+//         return new Promise((resolve, reject) =>{
+//             setTimeout(() =>){
+//             resolve();
+//             }, miliseconds;
+//         });
+//
+// };
+//
+// wait(1000).then(() => console.log("you'll see this after 1 second"));
+//
+//
+// const request = fetch('https://api.github.com/users/:username/events',{headers: {Authorization: 'token '}
+// });
+// request
+//
+//     .then(response => response.json())
+//     .then(events => console.log(events[0].created_at))
+//     ;
+//
+//     request.catch(error => console.log(error));
