@@ -1,7 +1,7 @@
 (function() {
     "use strict";
 
-
+    //
     $('dt').click(function () {
         $("dd").toggleClass("invisible");
         $(this).toggleClass("highlight");
@@ -16,7 +16,7 @@
 
     $('.expander').click(function(){
         $(this).parent().next().slideToggle(200);
-    };
+    });
 
 
     $("#list-button").click(function () {
